@@ -1,5 +1,5 @@
 ---
-title: "COMPSCI 0.10" 小学生计算机科学课程
+title: "COMPSCI 0.10 小学生计算机科学课程"
 summary: 改编自UC Berkeley CS10的小学计算机科学启蒙课程，旨在激发青少年对编程和计算思维的兴趣。
 tags:
   - 教育
