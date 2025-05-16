@@ -1,5 +1,5 @@
 ---
-title: 'Experience'
+title: '经验'
 date: 2023-10-24
 type: landing
 
@@ -17,19 +17,19 @@ sections:
       # Hugo date format
       date_format: 'January 2006'
       # Education or Experience section first?
-      is_education_first: false
+      is_education_first: true
   - block: resume-skills
     content:
-      title: Skills & Hobbies
+      title: 技能与爱好
       username: admin
     design:
-      show_skill_percentage: false
+      show_skill_percentage: true
   - block: resume-awards
     content:
-      title: Awards
+      title: 荣誉奖项
       username: admin
   - block: resume-languages
     content:
-      title: Languages
+      title: 语言能力
       username: admin
 ---

@@ -1,17 +1,17 @@
 ---
 # Display name
-title: 吳健雄
+title: 刘沛卓
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: Peizhuo Liu
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Peizhuo
+last_name: Liu
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: 🧠
 
 # Is this the primary user of the site?
 superuser: true
@@ -20,167 +20,174 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Chief Scientist
+role: 高中生 & AI研究助理
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: OpenAI
-    url: https://openai.com/
+  - name: XXXX高级中学
+    url: #
+  - name: 西安交通大学人工智能研究院
+    url: #
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
     url: 'mailto:your-email@example.com'
-    label: E-mail Me
-  - icon: brands/x
-    url: https://twitter.com/GetResearchDev
-  - icon: brands/instagram
-    url: https://www.instagram.com/
+    label: 邮件联系
   - icon: brands/github
-    url: https://github.com/gcushen
+    url: https://github.com/
   - icon: brands/linkedin
     url: https://www.linkedin.com/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/
-  - icon: academicons/orcid
-    url: https://orcid.org/
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - 人工智能
+  - 可解释AI
+  - 深度学习
+  - 计算机科学教育
 
 education:
-  - area: PhD Artificial Intelligence
-    institution: Stanford University
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: 高中在读
+    institution: XXXX高级中学（全国示范性高中）
+    date_start: 2023-09-01
+    date_end: 2026-07-01
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com'
-  - area: MEng Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+      GPA：9年级 90+ /100；10–11年级约 95 /100
+  - area: UC Berkeley Summer Session
+    institution: University of California, Berkeley
+    date_start: 2024-06-01
+    date_end: 2024-08-01
     summary: |
-      GPA: 3.8/4.0
-
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: BSc Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      GPA: 3.4/4.0
+      课程：Data 8（Foundations of Data Science）、CS10（The Beauty & Joy of Computing）
       
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      成绩：GPA 4.0（A+），期末项目《A BERT‑Based Emotion Diagnosis Support System》全班34人排名第1，被评价为"sophomore undergraduate level"。
+  - area: Gap Year
+    institution: 西安交通大学人工智能研究院
+    date_start: 2022-09-01
+    date_end: 2023-08-01
+    summary: |
+      因PTSD休学一年，随后师从任教授，进入西安交通大学人工智能研究院担任研究助理，系统学习深度学习与可解释AI。
+
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
+  - position: 研究助理
+    company_name: 西安交通大学人工智能研究院
     company_url: ''
     company_logo: ''
-    date_start: 2021-01-01
+    date_start: 2022-09-01
     date_end: ''
     summary: |2-
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
+      工作内容：
+      - 聚焦深度学习与可解释AI
+      - 独立完成BERT-LIME情感诊断项目
+      - 参与导师课题组讨论
+      - 研读Stanford CS231n（至Lecture 11）
+  - position: 中国国家英才计划学者
+    company_name: 英才计划
     company_url: ''
     company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+    date_start: 2023-01-01
+    date_end: ''
     summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - 省级代表
+      - 参加全国会议并展示研究成果
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: 编程技能
     items:
       - name: Python
         description: ''
+        percent: 90
+        icon: code-bracket
+      - name: JavaScript/TypeScript
+        description: ''
         percent: 80
         icon: code-bracket
-      - name: Data Science
+      - name: C++
         description: ''
-        percent: 100
+        percent: 70
+        icon: code-bracket
+      - name: Bash
+        description: ''
+        percent: 60
+        icon: code-bracket
+  - name: 框架与库
+    color: '#0076DD'
+    color_border: '#0076DD'
+    items:
+      - name: PyTorch/TensorFlow
+        description: ''
+        percent: 85
         icon: chart-bar
-      - name: SQL
+      - name: FastAPI/React
         description: ''
-        percent: 40
+        percent: 75
+        icon: code-bracket
+      - name: PostgreSQL
+        description: ''
+        percent: 70
         icon: circle-stack
-  - name: Hobbies
+  - name: 兴趣爱好
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
+      - name: Tennis
         description: ''
         percent: 80
-        icon: camera
+        icon: person-simple-walk
+      - name: Hip-hop
+        description: ''
+        percent: 90
+        icon: music
+      - name: LEGO Technic
+        description: ''
+        percent: 95
+        icon: puzzle
 
 languages:
-  - name: English
+  - name: 中文
     percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+  - name: 英语
+    percent: 85
 
 # Awards.
 #   Add/remove as many awards below as you like.
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: Neural Networks and Deep Learning
-    url: https://www.coursera.org/learn/neural-networks-deep-learning
-    date: '2023-11-25'
-    awarder: Coursera
-    icon: coursera
+  - title: SAT 1500/1600
+    date: '2025-03-01'
+    awarder: College Board
+    icon: award
     summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
-  - title: Blockchain Fundamentals
-    url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-    date: '2023-07-01'
-    awarder: edX
-    icon: edx
+      标准化考试成绩
+  - title: TOEFL iBT 100/120
+    date: '2025-03-01'
+    awarder: ETS
+    icon: award
     summary: |
-      Learned:
-      - Synthesize your own blockchain solutions
-      - Gain an in-depth understanding of the specific mechanics of Bitcoin
-      - Understand Bitcoin’s real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin’s Proof-of-Work consensus algorithm
-  - title: 'Object-Oriented Programming in R'
-    url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
-    certificate_url: https://www.datacamp.com
-    date: '2023-01-21'
-    awarder: datacamp
-    icon: datacamp
+      阅读28, 听力28, 口语24, 写作20
+  - title: UC Berkeley Summer Session 双课程A+
+    date: '2024-08-01'
+    awarder: UC Berkeley
+    icon: award
     summary: |
-      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
+      Data 8（Foundations of Data Science）、CS10（The Beauty & Joy of Computing）双课程获得A+成绩
+  - title: First Place, Course Project Showcase
+    date: '2024-08-01'
+    awarder: UC Berkeley CS10
+    icon: award
+    summary: |
+      期末项目《A BERT‑Based Emotion Diagnosis Support System》获得全班第一名
+  - title: ACSL (American Computer Science League) Team Captain
+    date: '2024-05-01'
+    awarder: ACSL
+    icon: award
+    summary: |
+      设计训练计划，带领团队在预赛中取得满分成绩
 ---
 
-## About Me
+## 关于我
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+我是刘沛卓，一名高中生和AI研究助理。我专注于深度学习与可解释AI研究，目前在西安交通大学人工智能研究院担任研究助理。我创立并领导学校计算机科学俱乐部，同时在当地小学教授"COMPSCI 0.10"计算机科学入门课程。我热爱编程、网球和乐高，希望通过AI技术解决心理健康诊断等社会问题。
