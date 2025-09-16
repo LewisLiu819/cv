@@ -1,0 +1,285 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Blog - Insights on AI, Education & Technology" description="Read my thoughts on explainable AI, computer science education, research experiences, and building bridges between technology and community">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-teal-50 py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        Blog & <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-teal-600">Insights</span>
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+        Thoughts on AI research, educational innovation, and the journey of building bridges
+        between technology and community.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Categories -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Explore by Topic</h2>
+        <p class="text-lg text-gray-600">Discover insights across different areas of my work and interests</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow cursor-pointer">
+          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">AI Research</h3>
+          <p class="text-sm text-gray-600">Explainable AI, machine learning insights, and research updates</p>
+          <div class="mt-3 text-xs text-primary-600 font-medium">5 articles</div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow cursor-pointer">
+          <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Education</h3>
+          <p class="text-sm text-gray-600">Teaching methods, curriculum design, and educational innovation</p>
+          <div class="mt-3 text-xs text-teal-600 font-medium">7 articles</div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow cursor-pointer">
+          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Leadership</h3>
+          <p class="text-sm text-gray-600">Community building, mentorship, and growth experiences</p>
+          <div class="mt-3 text-xs text-primary-600 font-medium">4 articles</div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow cursor-pointer">
+          <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Culture</h3>
+          <p class="text-sm text-gray-600">International experiences, bridge-building, and personal growth</p>
+          <div class="mt-3 text-xs text-teal-600 font-medium">6 articles</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Posts -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Posts</h2>
+        <p class="text-lg text-gray-600">Recent insights and popular articles</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <!-- Featured Post 1 -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <div class="h-48 bg-gradient-to-r from-primary-400 to-primary-600 flex items-center justify-center">
+            <div class="text-white text-center">
+              <div class="text-6xl mb-4">🧠</div>
+              <div class="text-sm font-medium">AI RESEARCH</div>
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <time>December 15, 2024</time>
+              <span class="mx-2">•</span>
+              <span>8 min read</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Making AI Explainable: Why Black Boxes Need Glass Doors
+            </h3>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              As AI systems become more powerful and pervasive, the need for explainability becomes critical.
+              This post explores why transparency in AI isn't just nice to have—it's essential for building trust,
+              ensuring fairness, and enabling effective human-AI collaboration.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded">Explainable AI</span>
+                <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded">Research</span>
+              </div>
+              <a href="#" class="text-primary-600 hover:text-primary-700 font-medium text-sm">
+                Read more →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Featured Post 2 -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <div class="h-48 bg-gradient-to-r from-teal-400 to-teal-600 flex items-center justify-center">
+            <div class="text-white text-center">
+              <div class="text-6xl mb-4">👩‍🏫</div>
+              <div class="text-sm font-medium">EDUCATION</div>
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <time>December 10, 2024</time>
+              <span class="mx-2">•</span>
+              <span>6 min read</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Teaching CS to 8-Year-Olds: Lessons from COMPSCI 0.10
+            </h3>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              What I learned from teaching computer science to 350+ elementary school students. From turning
+              algorithms into playground games to making abstraction concrete, here are the key insights that
+              made complex concepts accessible to young minds.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-teal-100 text-teal-800 text-xs rounded">Teaching</span>
+                <span class="px-2 py-1 bg-teal-100 text-teal-800 text-xs rounded">Curriculum</span>
+              </div>
+              <a href="#" class="text-teal-600 hover:text-teal-700 font-medium text-sm">
+                Read more →
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Posts -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Recent Posts</h2>
+        <p class="text-lg text-gray-600">Latest thoughts and updates</p>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Recent Post 1 -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="md:flex">
+            <div class="md:w-1/4 h-48 md:h-auto bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center">
+              <div class="text-white text-4xl">🌉</div>
+            </div>
+            <div class="md:w-3/4 p-8">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded mr-3">Culture</span>
+                <time>December 5, 2024</time>
+                <span class="mx-2">•</span>
+                <span>7 min read</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                From Xi'an to Berkeley and Back: Building Bridges Across Cultures
+              </h3>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                My journey between Eastern and Western educational systems taught me that the best learning
+                happens when we build bridges between different perspectives. Here's how cultural diversity
+                became my superpower in both research and teaching.
+              </p>
+              <a href="#" class="text-purple-600 hover:text-purple-700 font-medium text-sm">
+                Read full article →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Recent Post 2 -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="md:flex">
+            <div class="md:w-1/4 h-48 md:h-auto bg-gradient-to-br from-green-400 to-blue-400 flex items-center justify-center">
+              <div class="text-white text-4xl">🏆</div>
+            </div>
+            <div class="md:w-3/4 p-8">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded mr-3">Leadership</span>
+                <time>November 28, 2024</time>
+                <span class="mx-2">•</span>
+                <span>5 min read</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Perfect Scores and Imperfect Journeys: Reflections on ACSL Success
+              </h3>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                Achieving a perfect 12/12 score in ACSL wasn't just about getting the answers right—it was about
+                learning to help others find their own paths to success. Sometimes the most valuable lessons come
+                from teaching, not winning.
+              </p>
+              <a href="#" class="text-green-600 hover:text-green-700 font-medium text-sm">
+                Read full article →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Recent Post 3 -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="md:flex">
+            <div class="md:w-1/4 h-48 md:h-auto bg-gradient-to-br from-blue-400 to-indigo-400 flex items-center justify-center">
+              <div class="text-white text-4xl">❤️</div>
+            </div>
+            <div class="md:w-3/4 p-8">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded mr-3">AI Research</span>
+                <time>November 20, 2024</time>
+                <span class="mx-2">•</span>
+                <span>9 min read</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                AI for Mental Health: Challenges and Opportunities in Sentiment Analysis
+              </h3>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                Mental health applications of AI require unique considerations around privacy, bias, and ethical
+                deployment. This post explores the technical and human challenges of building AI systems that
+                can genuinely help people's emotional wellbeing.
+              </p>
+              <a href="#" class="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                Read full article →
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Load More -->
+      <div class="text-center mt-12">
+        <button class="bg-gradient-to-r from-primary-600 to-teal-600 text-white font-medium py-3 px-8 rounded-md hover:from-primary-700 hover:to-teal-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+          Load More Posts
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="bg-gradient-to-r from-primary-600 to-teal-600 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+      <p class="text-xl text-primary-100 mb-8">
+        Get the latest insights on AI research, educational innovation, and bridge-building delivered to your inbox.
+      </p>
+      <div class="max-w-md mx-auto">
+        <form class="flex flex-col sm:flex-row gap-4">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 px-4 py-3 rounded-md border-0 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600"
+          />
+          <button
+            type="submit"
+            class="bg-white text-primary-600 font-medium py-3 px-6 rounded-md hover:bg-gray-50 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+          >
+            Subscribe
+          </button>
+        </form>
+        <p class="text-primary-200 text-sm mt-4">
+          No spam, ever. Unsubscribe anytime.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
