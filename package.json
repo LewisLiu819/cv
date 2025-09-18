@@ -19,6 +19,7 @@
     "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.13.7",
     "tailwindcss": "^3.4.17",
-    "vercel": "^48.0.1"
+    "vercel": "^48.0.2",
+    "xlsx": "^0.18.5"
   }
 }

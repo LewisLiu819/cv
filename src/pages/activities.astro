@@ -1,0 +1,948 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Co-Curricular Activities - Building Bridges Through Diverse Experiences">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-teal-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          Co-Curricular
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-teal-600">
+            Activities
+          </span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          Exploring diverse interests and building bridges across technology, education, research, and community service
+        </p>
+        <div class="flex justify-center space-x-4 text-sm text-gray-500">
+          <span class="bg-white px-3 py-1 rounded-full shadow">11 Activities</span>
+          <span class="bg-white px-3 py-1 rounded-full shadow">6 Categories</span>
+          <span class="bg-white px-3 py-1 rounded-full shadow">4 Years Experience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="bg-white py-8 border-b border-gray-200 sticky top-16 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-3">
+        <button class="filter-btn active" data-filter="all">
+          All Activities
+        </button>
+        <button class="filter-btn" data-filter="research">
+          Research
+        </button>
+        <button class="filter-btn" data-filter="technology">
+          Technology
+        </button>
+        <button class="filter-btn" data-filter="robotics">
+          Robotics
+        </button>
+        <button class="filter-btn" data-filter="service">
+          Community Service
+        </button>
+        <button class="filter-btn" data-filter="cultural">
+          Cultural
+        </button>
+        <button class="filter-btn" data-filter="academic">
+          Academic
+        </button>
+        <button class="filter-btn" data-filter="environmental">
+          Environmental
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities Grid -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="activities-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Activity 1: Research Assistant -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="research" data-id="1">
+          <div class="h-48 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">Research</span>
+              <span class="text-xs text-gray-500">G9-G12</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">AI Research Assistant</h3>
+            <p class="text-sm text-gray-600 mb-3">Xi'an Jiaotong University, School of AI and Robotics</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Self-studied Stanford graduate AI courses (CS231n/224n/224w). Participated in AI4Health research on AI & mental health, focusing on RL methods.</p>
+            <button class="mt-4 w-full bg-blue-50 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity 2: EASRL-MH Project -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="technology" data-id="2">
+          <div class="h-48 bg-gradient-to-br from-green-100 to-emerald-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">Technology</span>
+              <span class="text-xs text-gray-500">G11-G12</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">EASRL-MH Lead Developer</h3>
+            <p class="text-sm text-gray-600 mb-3">Enhanced Adaptive Symptom Reasoning Learning for Mental Health</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Developed adaptive AI for mental health diagnosis; shortened 30-50 clinical questions to ~9.6; reached 86.4% accuracy on NCS-R dataset with 3000 tests.</p>
+            <button class="mt-4 w-full bg-green-50 text-green-600 py-2 px-4 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity 3: Sentiment Analysis -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="technology" data-id="3">
+          <div class="h-48 bg-gradient-to-br from-purple-100 to-violet-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">Technology</span>
+              <span class="text-xs text-gray-500">G10-G11</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">BERT Sentiment Analysis</h3>
+            <p class="text-sm text-gray-600 mb-3">China Talented Youth Program, Directed by Prof. Yu Zhiwen</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Fine-tuned BERT on Sentiment140 dataset (~1.6M tweets) with LIME-based explainability. Achieved 95.6% accuracy, ranked 1/34.</p>
+            <button class="mt-4 w-full bg-purple-50 text-purple-600 py-2 px-4 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity 4: Baymax Robot -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="robotics" data-id="4">
+          <div class="h-48 bg-gradient-to-br from-orange-100 to-red-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-orange-600 bg-orange-100 px-2 py-1 rounded-full">Robotics</span>
+              <span class="text-xs text-gray-500">Current</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">AI "Baymax" Robot</h3>
+            <p class="text-sm text-gray-600 mb-3">AI Robotic Development Innovation Project</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Designing and building a "Baymax" voice-recognition robot with custom emotion analysis AI program. Planning pilot test at elementary school.</p>
+            <button class="mt-4 w-full bg-orange-50 text-orange-600 py-2 px-4 rounded-lg hover:bg-orange-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity 5: CYT Project Leader -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="research" data-id="5">
+          <div class="h-48 bg-gradient-to-br from-yellow-100 to-amber-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">Research</span>
+              <span class="text-xs text-gray-500">G10-G11</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">CYT Project Leader</h3>
+            <p class="text-sm text-gray-600 mb-3">China Talented Youth Program (CYT)</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Only Shaanxi delegate out of 87 students nationwide at CYT national report; presented project to university professors; received top praise.</p>
+            <button class="mt-4 w-full bg-yellow-50 text-yellow-600 py-2 px-4 rounded-lg hover:bg-yellow-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity 6: Pioneer Academics -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="research" data-id="6">
+          <div class="h-48 bg-gradient-to-br from-indigo-100 to-blue-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full">Research</span>
+              <span class="text-xs text-gray-500">G11-G12</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Pioneer Academics Researcher</h3>
+            <p class="text-sm text-gray-600 mb-3">CMU Prof. Hanan Hibshi's Mentorship</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Published 30-page arXiv preprint on robustness of RL-based medical AI systems; evaluated 6 attack methods and proposed input-validation safeguards.</p>
+            <button class="mt-4 w-full bg-indigo-50 text-indigo-600 py-2 px-4 rounded-lg hover:bg-indigo-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity 7: CS 0.10 Teaching -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="service" data-id="7">
+          <div class="h-48 bg-gradient-to-br from-teal-100 to-cyan-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-teal-600 bg-teal-100 px-2 py-1 rounded-full">Community Service</span>
+              <span class="text-xs text-gray-500">G11-G12</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">CS 0.10 Instructor</h3>
+            <p class="text-sm text-gray-600 mb-3">4th Elementary School of Hang Tian District</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Adapted UCB's CS10 course into COMPSCI 0.10, designed bilingual Snap! + Python curriculum, teaching 350+ 5th/6th graders.</p>
+            <button class="mt-4 w-full bg-teal-50 text-teal-600 py-2 px-4 rounded-lg hover:bg-teal-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity 8: Tea Culture -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="cultural" data-id="8">
+          <div class="h-48 bg-gradient-to-br from-pink-100 to-rose-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-pink-600 bg-pink-100 px-2 py-1 rounded-full">Cultural</span>
+              <span class="text-xs text-gray-500">G9-G12</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Tea Brewer & Appraiser</h3>
+            <p class="text-sm text-gray-600 mb-3">Chinese Tea Culture Exploration</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Studied 30+ tea varieties, tested optimal water temperatures (70-90°C). Hosted monthly tea tastings for 20+ friends and families, logged taste profiles.</p>
+            <button class="mt-4 w-full bg-pink-50 text-pink-600 py-2 px-4 rounded-lg hover:bg-pink-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity 9: UCSD Coursera -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="academic" data-id="9">
+          <div class="h-48 bg-gradient-to-br from-gray-100 to-slate-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-gray-600 bg-gray-100 px-2 py-1 rounded-full">Academic</span>
+              <span class="text-xs text-gray-500">G9</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">UCSD Self-Learner</h3>
+            <p class="text-sm text-gray-600 mb-3">Coursera Data Structures & Algorithms</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Completed UCSD's Data Structures and Algorithms course; studied complex algorithms. Implemented knowledge in later projects and shared codes on GitHub.</p>
+            <button class="mt-4 w-full bg-gray-50 text-gray-600 py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity 10: CS Club -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="technology" data-id="10">
+          <div class="h-48 bg-gradient-to-br from-emerald-100 to-green-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-emerald-600 bg-emerald-100 px-2 py-1 rounded-full">Technology</span>
+              <span class="text-xs text-gray-500">G10-G12</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">CS Club Founder</h3>
+            <p class="text-sm text-gray-600 mb-3">High School attached to NWPU</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Organized student-led CS club, trained 60+ students in USACO-style algorithms and problem-solving, mentored 3 to NOI medals.</p>
+            <button class="mt-4 w-full bg-emerald-50 text-emerald-600 py-2 px-4 rounded-lg hover:bg-emerald-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity 11: Environmental -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="environmental" data-id="11">
+          <div class="h-48 bg-gradient-to-br from-lime-100 to-green-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-5 0-9-4-9-9s4-9 9-9"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-lime-600 bg-lime-100 px-2 py-1 rounded-full">Environmental</span>
+              <span class="text-xs text-gray-500">G9-G12</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Green Alxa Volunteer</h3>
+            <p class="text-sm text-gray-600 mb-3">Environmental Conservation & Website Development</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Co-planted 3000+ trees across 1500 sq km in 5 summers. Building interactive education website using GIS grid layers to map greening progress.</p>
+            <button class="mt-4 w-full bg-lime-50 text-lime-600 py-2 px-4 rounded-lg hover:bg-lime-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity 12: Mathematical Competitions -->
+        <div class="activity-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="academic" data-id="12">
+          <div class="h-48 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center">
+            <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">Academic</span>
+              <span class="text-xs text-gray-500">G11</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Mathematical Competitions</h3>
+            <p class="text-sm text-gray-600 mb-3">AMC 12, AIME, USACO Platinum</p>
+            <p class="text-gray-700 text-sm line-clamp-3">Global Top 5% in AMC 12 (126/132), qualified for AIME (score: 9), reached USACO Platinum Division, and achieved AP Scholar with Distinction.</p>
+            <button class="mt-4 w-full bg-blue-50 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium">
+              Learn More →
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Activity Detail Modal -->
+  <div id="activity-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div id="modal-content">
+          <!-- Dynamic content will be loaded here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .filter-btn {
+    @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-200;
+    @apply bg-gray-100 text-gray-600 hover:bg-gray-200;
+  }
+
+  .filter-btn.active {
+    @apply bg-primary-600 text-white shadow-lg;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .activity-card {
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  // Activity data
+  const activities = {
+    1: {
+      title: "AI Research Assistant",
+      organization: "Xi'an Jiaotong University, School of AI and Robotics",
+      position: "Research Assistant for Prof. Ren Pengju",
+      period: "Grade 9-12",
+      category: "Research",
+      description: "Self-studied Stanford graduate AI courses (CS231n/224n/224w). Participated in AI4Health graduate research on AI & mental health, focusing on RL methods.",
+      achievements: [
+        "Completed Stanford CS231n (Convolutional Neural Networks for Visual Recognition)",
+        "Completed Stanford CS224n (Natural Language Processing with Deep Learning)",
+        "Completed Stanford CS224w (Machine Learning with Graphs)",
+        "Participated in AI4Health graduate research project",
+        "Specialized in Reinforcement Learning methods for mental health applications"
+      ],
+      skills: ["Deep Learning", "Computer Vision", "NLP", "Reinforcement Learning", "PyTorch", "Python"],
+      links: [
+        { name: "CS231n Course", url: "http://cs231n.stanford.edu/" },
+        { name: "CS224n Course", url: "http://web.stanford.edu/class/cs224n/" },
+        { name: "CS224w Course", url: "http://web.stanford.edu/class/cs224w/" }
+      ]
+    },
+    2: {
+      title: "EASRL-MH Lead Developer",
+      organization: "Enhanced Adaptive Symptom Reasoning Learning for Mental Health",
+      position: "Lead Developer",
+      period: "Grade 11-12",
+      category: "Technology",
+      description: "Developed adaptive AI for mental health diagnosis that significantly reduces clinical assessment burden while maintaining high accuracy.",
+      achievements: [
+        "Reduced clinical questionnaire from 30-50 questions to ~9.6 questions",
+        "Achieved 86.4% diagnostic accuracy",
+        "Tested on NCS-R dataset with 3000 test cases",
+        "Implemented adaptive learning algorithms",
+        "Designed user-friendly interface for clinical deployment"
+      ],
+      skills: ["Machine Learning", "Healthcare AI", "Python", "Data Analysis", "Clinical Research", "Adaptive Systems"],
+      impact: "Potential to reduce mental health screening time by 80% while maintaining clinical accuracy",
+      links: [
+        { name: "NCS-R Dataset", url: "https://www.hcp.med.harvard.edu/ncs/replication.php" }
+      ]
+    },
+    3: {
+      title: "BERT Sentiment Analysis Research",
+      organization: "China Talented Youth Program",
+      position: "Model Developer, Directed by Prof. Yu Zhiwen (NWPU)",
+      period: "Grade 10-11",
+      category: "Technology",
+      description: "Fine-tuned BERT model for sentiment analysis with explainable AI features, achieving state-of-the-art results on large-scale dataset.",
+      achievements: [
+        "Fine-tuned BERT on Sentiment140 dataset (~1.6M tweets)",
+        "Achieved 95.6% sentiment classification accuracy",
+        "Ranked 1st out of 34 participants in the program",
+        "Implemented LIME-based explainability features",
+        "Improved model interpretability for practical deployment",
+        "Outstanding participant in China Youth Project Summer & Winter Camps (top 10%)"
+      ],
+      skills: ["BERT", "NLP", "Sentiment Analysis", "Explainable AI", "LIME", "PyTorch", "Transformers"],
+      dataset: "1.6 million tweets from Sentiment140",
+      recognition: [
+        "Top performer (1/34) in China Talented Youth Program",
+        "Outstanding participant in China Youth Project Summer & Winter Camps",
+        "Top 10% performance nationally in both camps",
+        "Selected for advanced research methodology training"
+      ],
+      awards: [
+        {
+          name: "China Youth Project Outstanding Participant",
+          level: "National",
+          description: "Top 10% performance in both Summer and Winter camps",
+          grade: "G11"
+        }
+      ],
+      links: [
+        { name: "Sentiment140 Dataset", url: "http://help.sentiment140.com/" },
+        { name: "LIME Documentation", url: "https://github.com/marcotcr/lime" }
+      ]
+    },
+    4: {
+      title: "AI 'Baymax' Robot Development",
+      organization: "Personal Innovation Project",
+      position: "Innovator in AI Robotic Development",
+      period: "Current Project",
+      category: "Robotics",
+      description: "Designing and building an emotional support robot inspired by Baymax, featuring voice recognition and emotion analysis capabilities.",
+      achievements: [
+        "Designed voice recognition system architecture",
+        "Developed custom emotion analysis AI program",
+        "Created prototype hardware specifications",
+        "Planned pilot testing at elementary school",
+        "Integrated speech synthesis for natural interactions"
+      ],
+      skills: ["Robotics", "Voice Recognition", "Emotion AI", "Hardware Design", "Raspberry Pi", "Python", "Speech Processing"],
+      status: "In Development",
+      future_plans: "Pilot test at elementary school to support children's emotional well-being",
+      inspiration: "Baymax from Big Hero 6 - creating accessible emotional support technology"
+    },
+    5: {
+      title: "China Talented Youth Program Project Leader",
+      organization: "China Talented Youth Program (CYT)",
+      position: "Project Leader under Prof. Yu Zhiwen's group, NWPU",
+      period: "Grade 10-11",
+      category: "Research",
+      description: "Led prestigious national research project, representing Shaanxi province at the national level.",
+      achievements: [
+        "Selected as only Shaanxi delegate out of 87 students nationwide",
+        "Presented research project to university professors at national conference",
+        "Received top praise for project presentation and research quality",
+        "Led interdisciplinary research team",
+        "Demonstrated exceptional research and leadership capabilities"
+      ],
+      recognition: [
+        "Only representative from Shaanxi Province",
+        "1 of 87 students selected nationally",
+        "Top praise from university professors",
+        "Leadership recognition in competitive program"
+      ],
+      skills: ["Research Leadership", "Project Management", "Academic Presentation", "Interdisciplinary Collaboration"],
+      significance: "Represents top 0.1% of high school research talent in China"
+    },
+    6: {
+      title: "Pioneer Academics Research",
+      organization: "Pioneer Academics - CMU",
+      position: "Researcher under Prof. Hanan Hibshi's Mentorship",
+      period: "Grade 11-12",
+      category: "Research",
+      description: "Conducted advanced research on AI robustness in medical applications, resulting in academic publication.",
+      achievements: [
+        "Published 30-page research paper on arXiv",
+        "Evaluated 6 different attack methods on RL-based medical AI",
+        "Proposed novel input-validation safeguards",
+        "Demonstrated vulnerabilities in current medical AI systems",
+        "Contributed to AI safety research field"
+      ],
+      publication: "Robustness of RL-based Medical AI Systems: Attack Evaluation and Input Validation Safeguards",
+      research_focus: "AI Safety, Medical AI Robustness, Adversarial Attacks, Input Validation",
+      skills: ["AI Safety", "Reinforcement Learning", "Medical AI", "Academic Writing", "Security Research"],
+      mentorship: "Direct guidance from Carnegie Mellon University professor",
+      links: [
+        { name: "Pioneer Academics", url: "https://pioneeracademics.com/" },
+        { name: "arXiv Publication", url: "#" }
+      ]
+    },
+    7: {
+      title: "COMPSCI 0.10 Curriculum Designer & Instructor",
+      organization: "4th Elementary School of Hang Tian District",
+      position: "Curriculum Designer, Instructor",
+      period: "Grade 11-12",
+      category: "Community Service",
+      description: "Adapted UC Berkeley's CS10 course for elementary students, creating comprehensive bilingual curriculum.",
+      achievements: [
+        "Taught 350+ elementary school students (5th & 6th grade)",
+        "Adapted UC Berkeley CS10 course content for younger learners",
+        "Designed bilingual curriculum (English/Chinese)",
+        "Created Snap! and Python programming modules",
+        "Developed age-appropriate computer science concepts",
+        "Received positive feedback from students, parents, and school administration"
+      ],
+      curriculum: [
+        "Visual programming with Snap!",
+        "Introduction to Python programming",
+        "Computational thinking concepts",
+        "Basic algorithms and data structures",
+        "Creative coding projects"
+      ],
+      impact: "Introduced 350+ young students to computer science, potentially inspiring future tech careers",
+      skills: ["Curriculum Design", "Teaching", "Snap!", "Python", "Educational Technology", "Cross-cultural Communication"],
+      recognition: "Successful adaptation of university-level content for elementary education"
+    },
+    8: {
+      title: "Tea Culture Expert & Community Builder",
+      organization: "Personal Cultural Pursuit",
+      position: "Tea Brewer and Appraiser",
+      period: "Grade 9-12",
+      category: "Cultural",
+      description: "Deep exploration of Chinese tea culture, building community through shared appreciation of traditional practices.",
+      achievements: [
+        "Studied 30+ different tea varieties and their origins",
+        "Researched optimal brewing temperatures (70-90°C) for different teas",
+        "Hosted monthly tea tasting events for 20+ friends and families",
+        "Maintained detailed taste profile logs and brewing notes",
+        "Shared knowledge of tea history and cultural significance",
+        "Built intercultural connections through tea appreciation"
+      ],
+      tea_knowledge: [
+        "Green teas (Longjing, Biluochun, Maofeng)",
+        "Oolong teas (Tieguanyin, Da Hong Pao)",
+        "Black teas (Keemun, Lapsang Souchong)",
+        "White teas (Bai Hao Yin Zhen, Shou Mei)",
+        "Pu-erh teas (Sheng and Shou varieties)"
+      ],
+      skills: ["Cultural Appreciation", "Community Building", "Event Organization", "Cross-cultural Communication", "Attention to Detail"],
+      cultural_impact: "Preserved and shared traditional Chinese tea culture with diverse community"
+    },
+    9: {
+      title: "UCSD Data Structures & Algorithms",
+      organization: "University of California San Diego (Coursera)",
+      position: "Self-Learner",
+      period: "Grade 9",
+      category: "Academic",
+      description: "Self-directed completion of university-level computer science coursework at early age.",
+      achievements: [
+        "Completed comprehensive Data Structures and Algorithms specialization",
+        "Studied complex algorithms including graph algorithms, dynamic programming",
+        "Implemented algorithms in multiple programming languages",
+        "Applied knowledge to subsequent personal and academic projects",
+        "Shared code implementations on GitHub for community benefit",
+        "Demonstrated exceptional self-motivation and learning ability"
+      ],
+      coursework: [
+        "Algorithmic Toolbox",
+        "Data Structures",
+        "Algorithms on Graphs",
+        "Algorithms on Strings",
+        "Advanced Algorithms and Complexity",
+        "Genome Assembly Programming Challenge"
+      ],
+      skills: ["Algorithms", "Data Structures", "Problem Solving", "Self-directed Learning", "Implementation Skills"],
+      early_achievement: "University-level coursework completed in Grade 9",
+      links: [
+        { name: "UCSD Algorithms Specialization", url: "https://www.coursera.org/specializations/algorithms" },
+        { name: "GitHub Repository", url: "#" }
+      ]
+    },
+    10: {
+      title: "Computer Science Club Founder & Mentor",
+      organization: "High School attached to NWPU",
+      position: "Founder, Teaching Assistant",
+      period: "Grade 10-12",
+      category: "Technology",
+      description: "Founded and led student computer science club, mentoring peers in competitive programming and algorithm development.",
+      achievements: [
+        "Founded computer science club to complement official school team",
+        "Trained 60+ students in USACO-style algorithms and problem-solving",
+        "Mentored 3 students to National Olympiad in Informatics (NOI) medals",
+        "Achieved personal perfect score (12/12) in ACSL Senior Division",
+        "Led team to ACSL Team Gold Award",
+        "Organized weekly training sessions and mock competitions",
+        "Created supportive learning environment for algorithm enthusiasts",
+        "Established sustainable club structure for future students"
+      ],
+      training_focus: [
+        "USACO Bronze, Silver, and Gold level problems",
+        "Dynamic programming techniques",
+        "Graph algorithms and data structures",
+        "Number theory and combinatorics",
+        "Competitive programming strategies",
+        "ACSL competition preparation"
+      ],
+      mentoring_success: "3 students achieved NOI medals under guidance",
+      skills: ["Leadership", "Teaching", "Competitive Programming", "Mentoring", "Community Building", "Algorithms"],
+      awards: [
+        {
+          name: "American Computer Science League, Senior Division Final Round, Team Gold Award & Personal Perfect Score",
+          level: "National",
+          description: "Perfect individual score (12/12) and team gold medal",
+          grade: "G11"
+        }
+      ],
+      recognition: [
+        "ACSL Personal Perfect Score (12/12)",
+        "ACSL Team Gold Award",
+        "National-level competitive programming excellence",
+        "Successful mentorship of NOI medalists"
+      ],
+      legacy: "Established lasting CS education culture at school"
+    },
+    11: {
+      title: "Green Alxa Environmental Initiative",
+      organization: "Green Alxa Movement",
+      position: "Greening Volunteer, Website Developer",
+      period: "Grade 9-12",
+      category: "Environmental",
+      description: "Multi-year environmental conservation effort combining hands-on tree planting with technology-driven progress tracking.",
+      achievements: [
+        "Co-planted 3000+ trees across 1500 square kilometers",
+        "Participated in environmental conservation for 5 consecutive summers",
+        "Developing interactive education website using GIS technology",
+        "Creating grid-layer mapping system to track greening progress",
+        "Combining environmental action with technological innovation",
+        "Building public awareness through interactive digital platform"
+      ],
+      environmental_impact: [
+        "3000+ trees planted",
+        "1500 sq km area coverage",
+        "5 years of consistent participation",
+        "Measurable contribution to desertification prevention"
+      ],
+      technology_component: [
+        "GIS (Geographic Information Systems) integration",
+        "Interactive web development",
+        "Grid-layer mapping visualization",
+        "Public education platform design",
+        "Environmental data tracking"
+      ],
+      skills: ["Environmental Conservation", "GIS Technology", "Web Development", "Data Visualization", "Community Engagement", "Sustainability"],
+      dual_impact: "Combines environmental action with technological innovation for education"
+    },
+    12: {
+      title: "Mathematical & Programming Competitions",
+      organization: "International & National Competitions",
+      position: "Individual Competitor",
+      period: "Grade 11",
+      category: "Academic",
+      description: "Outstanding performance across multiple prestigious mathematical and programming competitions, demonstrating exceptional problem-solving abilities.",
+      achievements: [
+        "AMC 12A Score: 126 (Global Top 5%)",
+        "AMC 12B Score: 132 (Global Top 5%)",
+        "AIME Qualification with score of 9/15",
+        "USACO Platinum Division (highest tier)",
+        "AP Scholar With Distinction recognition",
+        "Multiple international competition qualifications"
+      ],
+      competition_results: [
+        {
+          name: "AMC 12A",
+          score: "126",
+          ranking: "Global Top 5%",
+          description: "American Mathematics Competitions 12"
+        },
+        {
+          name: "AMC 12B",
+          score: "132",
+          ranking: "Global Top 5%",
+          description: "American Mathematics Competitions 12"
+        },
+        {
+          name: "AIME",
+          score: "9/15",
+          ranking: "Qualified",
+          description: "American Invitational Mathematics Examination"
+        },
+        {
+          name: "USACO",
+          score: "Platinum",
+          ranking: "Highest Division",
+          description: "USA Computing Olympiad"
+        }
+      ],
+      skills: ["Mathematical Problem Solving", "Algorithmic Thinking", "Competitive Programming", "Advanced Mathematics", "Logic and Reasoning"],
+      awards: [
+        {
+          name: "AMC 12, Score: 126 (A)/132 (B), Global Top 5%; AIME, Score: 9",
+          level: "International",
+          description: "Outstanding performance in mathematical competitions",
+          grade: "G11"
+        },
+        {
+          name: "USA Computing Olympiad, Platinum Division",
+          level: "International",
+          description: "Reached highest competitive programming tier",
+          grade: "G11"
+        },
+        {
+          name: "AP Scholar With Distinction",
+          level: "International",
+          description: "Highest level of AP academic recognition",
+          grade: "G11"
+        }
+      ],
+      recognition: [
+        "Global Top 5% in both AMC 12A and 12B",
+        "AIME qualification (top ~5% of AMC participants)",
+        "USACO Platinum Division (elite competitive programming)",
+        "AP Scholar With Distinction (highest AP recognition level)",
+        "Multiple international competition excellence"
+      ],
+      significance: "Demonstrates exceptional mathematical and computational problem-solving abilities at the highest international levels"
+    }
+  };
+
+  // DOM elements
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const activityCards = document.querySelectorAll('.activity-card');
+  const modal = document.getElementById('activity-modal');
+  const modalContent = document.getElementById('modal-content');
+
+  // Filter functionality
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter');
+
+      // Update active filter button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Filter cards
+      activityCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'block';
+          card.style.animation = 'fadeIn 0.3s ease-in';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Modal functionality
+  activityCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const activityId = card.getAttribute('data-id');
+      const activity = activities[activityId];
+
+      if (activity) {
+        showActivityModal(activity);
+      }
+    });
+  });
+
+  // Close modal when clicking outside
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close modal with escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+
+  function showActivityModal(activity) {
+    const content = generateModalContent(activity);
+    modalContent.innerHTML = content;
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+
+  function generateModalContent(activity) {
+    const achievementsList = activity.achievements?.map(achievement =>
+      `<li class="flex items-start space-x-2">
+        <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span>${achievement}</span>
+      </li>`
+    ).join('') || '';
+
+    const skillsList = activity.skills?.map(skill =>
+      `<span class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">${skill}</span>`
+    ).join('') || '';
+
+    const linksList = activity.links?.map(link =>
+      `<a href="${link.url}" target="_blank" class="inline-flex items-center text-primary-600 hover:text-primary-700 text-sm">
+        ${link.name}
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+      </a>`
+    ).join('') || '';
+
+    return `
+      <div class="p-8">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <div class="flex items-center space-x-3 mb-2">
+              <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">${activity.category}</span>
+              <span class="text-gray-500 text-sm">${activity.period}</span>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">${activity.title}</h2>
+            <p class="text-lg text-gray-600">${activity.organization}</p>
+            ${activity.position ? `<p class="text-md text-gray-500 mt-1">${activity.position}</p>` : ''}
+          </div>
+          <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Description</h3>
+            <p class="text-gray-700 leading-relaxed">${activity.description}</p>
+          </div>
+
+          ${activity.achievements ? `
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Key Achievements</h3>
+            <ul class="space-y-3 text-gray-700">
+              ${achievementsList}
+            </ul>
+          </div>
+          ` : ''}
+
+          ${activity.skills ? `
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Skills & Technologies</h3>
+            <div class="flex flex-wrap gap-2">
+              ${skillsList}
+            </div>
+          </div>
+          ` : ''}
+
+          ${activity.impact ? `
+          <div class="bg-blue-50 p-4 rounded-lg">
+            <h3 class="text-lg font-semibold text-blue-900 mb-2">Impact</h3>
+            <p class="text-blue-800">${activity.impact}</p>
+          </div>
+          ` : ''}
+
+          ${activity.recognition ? `
+          <div class="bg-yellow-50 p-4 rounded-lg">
+            <h3 class="text-lg font-semibold text-yellow-900 mb-2">Recognition</h3>
+            ${Array.isArray(activity.recognition) ?
+              `<ul class="text-yellow-800 space-y-1">
+                ${activity.recognition.map(item => `<li>• ${item}</li>`).join('')}
+              </ul>` :
+              `<p class="text-yellow-800">${activity.recognition}</p>`
+            }
+          </div>
+          ` : ''}
+
+          ${activity.awards ? `
+          <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg border-l-4 border-yellow-400">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+              <svg class="w-6 h-6 text-yellow-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+              </svg>
+              Awards & Honors
+            </h3>
+            <div class="space-y-4">
+              ${activity.awards.map(award => `
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                  <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-semibold text-gray-900 text-sm leading-snug">${award.name}</h4>
+                    <div class="flex space-x-2 ml-4 flex-shrink-0">
+                      <span class="text-xs px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full">${award.level}</span>
+                      <span class="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded-full">${award.grade}</span>
+                    </div>
+                  </div>
+                  <p class="text-sm text-gray-600">${award.description}</p>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+          ` : ''}
+
+          ${activity.competition_results ? `
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-blue-900 mb-4">Competition Results</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              ${activity.competition_results.map(result => `
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                  <div class="flex justify-between items-center mb-1">
+                    <h4 class="font-semibold text-blue-900">${result.name}</h4>
+                    <span class="font-bold text-blue-600">${result.score}</span>
+                  </div>
+                  <div class="text-sm text-blue-700 mb-1">${result.description}</div>
+                  <div class="text-xs text-blue-600 font-medium">${result.ranking}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+          ` : ''}
+
+          ${activity.links ? `
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Related Links</h3>
+            <div class="flex flex-wrap gap-4">
+              ${linksList}
+            </div>
+          </div>
+          ` : ''}
+        </div>
+      </div>
+    `;
+  }
+
+  // Make closeModal globally accessible
+  window.closeModal = closeModal;
+
+  // Add fade-in animation
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  `;
+  document.head.appendChild(style);
+</script>
