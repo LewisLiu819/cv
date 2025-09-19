@@ -1,0 +1,946 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Photos & Memories - Journey Through Events" description="Visual timeline of memorable moments, events, and experiences throughout my academic and personal journey">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-teal-50 py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          Photos & <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-teal-600">Memories</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          A visual timeline of memorable moments, research milestones, and experiences
+          that have shaped my academic and personal journey.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+          <div class="text-3xl font-bold text-primary-600 mb-2">2024</div>
+          <div class="text-gray-700">Current Year</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+          <div class="text-3xl font-bold text-teal-600 mb-2">50+</div>
+          <div class="text-gray-700">Memorable Moments</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+          <div class="text-3xl font-bold text-primary-600 mb-2">5</div>
+          <div class="text-gray-700">Major Events</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative">
+        <!-- Timeline Line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary-300 to-teal-300 h-full"></div>
+
+        <!-- Timeline Events -->
+        <div class="space-y-16">
+
+          <!-- Event 1: Conference Presentations 2024 -->
+          <div class="timeline-event">
+            <div class="flex items-center justify-center mb-8">
+              <div class="bg-white border-4 border-primary-300 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10">
+                <span class="text-primary-600 font-bold">2024</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Research Conference Presentations</h3>
+                <p class="text-primary-600 font-medium">December 2024 • Huazhong University of Science and Technology</p>
+              </div>
+
+              <!-- Preview Photos (3 featured) -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-purple-600 mb-2 text-3xl">📊</div>
+                      <p class="text-sm font-medium text-gray-700">Conference Presentation</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-blue-600 mb-2 text-3xl">🎤</div>
+                      <p class="text-sm font-medium text-gray-700">Research Presentation</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-emerald-600 mb-2 text-3xl">🏆</div>
+                      <p class="text-sm font-medium text-gray-700">Award Ceremony</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View All Button -->
+              <div class="text-center">
+                <button onclick="openPhotoGallery('conference-2024')"
+                        class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  View All 12 Photos
+                </button>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                Presenting my research on BERT-based emotion diagnosis systems at the China Talented Youth Program
+                National Conference. This milestone marked a significant achievement in making AI explainable for
+                mental health applications.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 2: Research Collaboration -->
+          <div class="timeline-event">
+            <div class="flex items-center justify-center mb-8">
+              <div class="bg-white border-4 border-teal-300 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10">
+                <span class="text-teal-600 font-bold">2024</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Carnegie Mellon Research Collaboration</h3>
+                <p class="text-teal-600 font-medium">Summer 2024 • Pioneer Academics Program</p>
+              </div>
+
+              <!-- Preview Photos (2 featured) -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-red-100 to-orange-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-red-600 mb-2 text-3xl">🔬</div>
+                      <p class="text-sm font-medium text-gray-700">Lab Research Session</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-yellow-100 to-amber-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-yellow-600 mb-2 text-3xl">📝</div>
+                      <p class="text-sm font-medium text-gray-700">Paper Writing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View All Button -->
+              <div class="text-center">
+                <button onclick="openPhotoGallery('cmu-research-2024')"
+                        class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 bg-gradient-to-r from-red-600 to-orange-600 text-white font-medium rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  View All 8 Photos
+                </button>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                Working with Prof. Hanan Hibshi on adversarial attacks in medical AI systems. This collaboration
+                resulted in my first arXiv publication and opened new research directions in healthcare AI security.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 3: Teaching Experience -->
+          <div class="timeline-event">
+            <div class="flex items-center justify-center mb-8">
+              <div class="bg-white border-4 border-primary-300 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10">
+                <span class="text-primary-600 font-bold">2023</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">COMPSCI 0.10 Teaching</h3>
+                <p class="text-primary-600 font-medium">2023-2024 • Elementary CS Education</p>
+              </div>
+
+              <!-- Preview Photos (3 featured) -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-green-600 mb-2 text-3xl">👨‍🏫</div>
+                      <p class="text-sm font-medium text-gray-700">Classroom Teaching</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-purple-100 to-violet-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-purple-600 mb-2 text-3xl">👥</div>
+                      <p class="text-sm font-medium text-gray-700">Student Projects</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-pink-100 to-rose-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-pink-600 mb-2 text-3xl">🎮</div>
+                      <p class="text-sm font-medium text-gray-700">Coding Games</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View All Button -->
+              <div class="text-center">
+                <button onclick="openPhotoGallery('teaching-2023')"
+                        class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-medium rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  View All 24 Photos
+                </button>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                Creating and teaching comprehensive computer science curriculum to 350+ elementary students.
+                These moments captured the joy of learning and the excitement when young minds discover the magic of coding.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 4: UC Berkeley Experience -->
+          <div class="timeline-event">
+            <div class="flex items-center justify-center mb-8">
+              <div class="bg-white border-4 border-teal-300 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10">
+                <span class="text-teal-600 font-bold">2023</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">UC Berkeley Summer Session</h3>
+                <p class="text-teal-600 font-medium">Summer 2023 • California, USA</p>
+              </div>
+
+              <!-- Preview Photos (3 featured) -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-blue-100 to-sky-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-blue-600 mb-2 text-3xl">🏛️</div>
+                      <p class="text-sm font-medium text-gray-700">Campus Life</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-emerald-100 to-green-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-emerald-600 mb-2 text-3xl">🌉</div>
+                      <p class="text-sm font-medium text-gray-700">Golden Gate Bridge</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-orange-100 to-red-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-orange-600 mb-2 text-3xl">🎓</div>
+                      <p class="text-sm font-medium text-gray-700">Graduation Day</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View All Button -->
+              <div class="text-center">
+                <button onclick="openPhotoGallery('berkeley-2023')"
+                        class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  View All 16 Photos
+                </button>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                An transformative summer studying at UC Berkeley, experiencing American education culture and
+                building international perspectives that would later influence my approach to cross-cultural education.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 5: University Beginning -->
+          <div class="timeline-event">
+            <div class="flex items-center justify-center mb-8">
+              <div class="bg-white border-4 border-primary-300 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10">
+                <span class="text-primary-600 font-bold">2022</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Journey Begins at XJTU</h3>
+                <p class="text-primary-600 font-medium">Fall 2022 • Xi'an Jiaotong University</p>
+              </div>
+
+              <!-- Preview Photos (3 featured) -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-cyan-600 mb-2 text-3xl">🎒</div>
+                      <p class="text-sm font-medium text-gray-700">First Day</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-violet-100 to-purple-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-violet-600 mb-2 text-3xl">👥</div>
+                      <p class="text-sm font-medium text-gray-700">New Friends</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                  <div class="w-full h-48 bg-gradient-to-br from-teal-100 to-cyan-100 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-teal-600 mb-2 text-3xl">🏫</div>
+                      <p class="text-sm font-medium text-gray-700">Campus Exploration</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View All Button -->
+              <div class="text-center">
+                <button onclick="openPhotoGallery('xjtu-beginning-2022')"
+                        class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-medium rounded-lg hover:from-cyan-700 hover:to-teal-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  View All 9 Photos
+                </button>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                The beginning of my university journey at Xi'an Jiaotong University, where I would discover my passion
+                for research, teaching, and building bridges between technology and education.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Upload Section -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">More Memories Coming Soon</h2>
+      <p class="text-lg text-gray-600 mb-8">
+        This timeline will continue to grow with new experiences, research milestones, and memorable moments.
+      </p>
+      <div class="bg-white p-8 rounded-xl shadow-lg max-w-md mx-auto">
+        <div class="text-gray-400 mb-4">
+          <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Photo Upload System</h3>
+        <p class="text-gray-600">
+          Future updates will include a dynamic photo upload system to easily add new memories and events to this timeline.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Modal -->
+  <div id="photoGalleryModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+        <!-- Modal Header -->
+        <div class="sticky top-0 bg-white border-b border-gray-200 p-6 rounded-t-xl z-10">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 id="modalTitle" class="text-2xl font-bold text-gray-900"></h3>
+              <p id="modalSubtitle" class="text-gray-600 mt-1"></p>
+            </div>
+            <button onclick="closePhotoGallery()" class="text-gray-400 hover:text-gray-600 transition-colors">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="p-6">
+          <!-- Event Description -->
+          <div id="modalDescription" class="bg-gray-50 p-4 rounded-lg mb-6">
+          </div>
+
+          <!-- Photo Grid -->
+          <div id="photoGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Photos will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .timeline-event {
+    position: relative;
+  }
+
+  .timeline-event::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 64px;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    border-radius: 50%;
+    z-index: 5;
+  }
+
+  .aspect-w-4 {
+    position: relative;
+    padding-bottom: 75%;
+  }
+
+  .aspect-h-3 > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* Hover animations */
+  .timeline-event .bg-white {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .timeline-event .bg-white:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Photo placeholder hover effects */
+  .aspect-w-4:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+  }
+
+  /* Modal animations */
+  .modal-enter {
+    animation: modalEnter 0.3s ease-out;
+  }
+
+  @keyframes modalEnter {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Photo item hover in modal */
+  .photo-item {
+    transition: all 0.3s ease;
+  }
+
+  .photo-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<script is:inline>
+  // Photo gallery data with detailed information
+  const photoGalleries = {
+    'conference-2024': {
+      title: 'Research Conference Presentations',
+      subtitle: 'December 2024 • Huazhong University of Science and Technology',
+      description: 'A comprehensive look at my presentation of BERT-based emotion diagnosis systems at the China Talented Youth Program National Conference. These photos capture the excitement of sharing research findings and connecting with fellow researchers.',
+      photos: [
+        {
+          title: 'Conference Opening Ceremony',
+          description: 'The grand opening of the China Talented Youth Program National Conference, with hundreds of young researchers gathered to share their work.',
+          emoji: '🎊',
+          gradient: 'from-purple-100 to-pink-100'
+        },
+        {
+          title: 'Research Presentation Setup',
+          description: 'Setting up my presentation on BERT-based emotion diagnosis systems. Final preparations before sharing my research with the academic community.',
+          emoji: '📊',
+          gradient: 'from-blue-100 to-indigo-100'
+        },
+        {
+          title: 'Presenting BERT Model',
+          description: 'Explaining the architecture and methodology of my emotion diagnosis system to conference attendees.',
+          emoji: '🎤',
+          gradient: 'from-emerald-100 to-teal-100'
+        },
+        {
+          title: 'Award Ceremony',
+          description: 'Receiving recognition for outstanding research contribution at the national level.',
+          emoji: '🏆',
+          gradient: 'from-yellow-100 to-amber-100'
+        },
+        {
+          title: 'Poster Session',
+          description: 'Interactive discussions during the poster session, answering questions about my research methodology.',
+          emoji: '🖼️',
+          gradient: 'from-rose-100 to-pink-100'
+        },
+        {
+          title: 'Networking with Peers',
+          description: 'Connecting with fellow researchers and sharing insights about mental health AI applications.',
+          emoji: '🤝',
+          gradient: 'from-cyan-100 to-blue-100'
+        },
+        {
+          title: 'Q&A Session',
+          description: 'Engaging in thoughtful discussions about the ethical implications of AI in mental health diagnosis.',
+          emoji: '❓',
+          gradient: 'from-violet-100 to-purple-100'
+        },
+        {
+          title: 'Technical Deep Dive',
+          description: 'Detailed explanation of LIME explanations and how they make AI decision-making transparent.',
+          emoji: '🔬',
+          gradient: 'from-green-100 to-emerald-100'
+        },
+        {
+          title: 'Conference Workshop',
+          description: 'Participating in workshops on the future of AI in healthcare and education.',
+          emoji: '🛠️',
+          gradient: 'from-orange-100 to-red-100'
+        },
+        {
+          title: 'Research Collaboration',
+          description: 'Meeting potential collaborators for future research projects in explainable AI.',
+          emoji: '👥',
+          gradient: 'from-indigo-100 to-purple-100'
+        },
+        {
+          title: 'Closing Ceremony',
+          description: 'Celebrating the success of the conference and looking forward to implementing feedback.',
+          emoji: '🎉',
+          gradient: 'from-pink-100 to-rose-100'
+        },
+        {
+          title: 'Conference Group Photo',
+          description: 'Final group photo with all participants, marking the end of an inspiring academic event.',
+          emoji: '📸',
+          gradient: 'from-teal-100 to-cyan-100'
+        }
+      ]
+    },
+    'cmu-research-2024': {
+      title: 'Carnegie Mellon Research Collaboration',
+      subtitle: 'Summer 2024 • Pioneer Academics Program',
+      description: 'Behind-the-scenes look at my collaboration with Prof. Hanan Hibshi on adversarial attacks in medical AI systems. This research resulted in my first arXiv publication and opened new directions in healthcare AI security.',
+      photos: [
+        {
+          title: 'First Day at CMU',
+          description: 'Arriving at Carnegie Mellon University for the Pioneer Academics Program, excited to begin research.',
+          emoji: '🎒',
+          gradient: 'from-red-100 to-orange-100'
+        },
+        {
+          title: 'Meeting Prof. Hibshi',
+          description: 'Initial meeting with my research mentor to discuss the project scope and objectives.',
+          emoji: '🤝',
+          gradient: 'from-blue-100 to-indigo-100'
+        },
+        {
+          title: 'Lab Research Session',
+          description: 'Deep dive into adversarial attack methods and their implications for medical AI systems.',
+          emoji: '🔬',
+          gradient: 'from-green-100 to-emerald-100'
+        },
+        {
+          title: 'Literature Review',
+          description: 'Extensive reading and analysis of existing research on adversarial robustness in healthcare.',
+          emoji: '📚',
+          gradient: 'from-purple-100 to-violet-100'
+        },
+        {
+          title: 'Coding Sessions',
+          description: 'Implementing adversarial attack algorithms and testing them on medical questionnaire systems.',
+          emoji: '💻',
+          gradient: 'from-cyan-100 to-blue-100'
+        },
+        {
+          title: 'Paper Writing',
+          description: 'Collaborating on the research paper that would later be published on arXiv.',
+          emoji: '📝',
+          gradient: 'from-yellow-100 to-amber-100'
+        },
+        {
+          title: 'Research Presentation',
+          description: 'Presenting preliminary findings to the research group for feedback and discussion.',
+          emoji: '📊',
+          gradient: 'from-pink-100 to-rose-100'
+        },
+        {
+          title: 'Final Research Results',
+          description: 'Celebrating the completion of the research project and successful paper submission.',
+          emoji: '🎉',
+          gradient: 'from-teal-100 to-cyan-100'
+        }
+      ]
+    },
+    'teaching-2023': {
+      title: 'COMPSCI 0.10 Teaching Experience',
+      subtitle: '2023-2024 • Elementary CS Education',
+      description: 'Memorable moments from teaching comprehensive computer science curriculum to 350+ elementary students. These photos capture the joy of learning and the excitement when young minds discover the magic of coding.',
+      photos: [
+        {
+          title: 'First Day of Class',
+          description: 'Welcome to COMPSCI 0.10! Introducing young students to the wonderful world of computer science.',
+          emoji: '🎓',
+          gradient: 'from-green-100 to-emerald-100'
+        },
+        {
+          title: 'Classroom Teaching',
+          description: 'Explaining fundamental programming concepts using visual aids and interactive examples.',
+          emoji: '👨‍🏫',
+          gradient: 'from-blue-100 to-indigo-100'
+        },
+        {
+          title: 'Student Projects Showcase',
+          description: 'Students proudly presenting their first programming projects - simple games and animations.',
+          emoji: '👥',
+          gradient: 'from-purple-100 to-violet-100'
+        },
+        {
+          title: 'Coding Games Session',
+          description: 'Interactive coding games that make learning programming concepts fun and engaging.',
+          emoji: '🎮',
+          gradient: 'from-pink-100 to-rose-100'
+        },
+        {
+          title: 'Problem Solving Workshop',
+          description: 'Teaching computational thinking through puzzles and logical reasoning exercises.',
+          emoji: '🧩',
+          gradient: 'from-orange-100 to-red-100'
+        },
+        {
+          title: 'Group Programming',
+          description: 'Collaborative coding sessions where students work together on larger projects.',
+          emoji: '🤝',
+          gradient: 'from-cyan-100 to-blue-100'
+        },
+        {
+          title: 'Student Achievements',
+          description: 'Celebrating students who mastered difficult concepts and created impressive projects.',
+          emoji: '🏆',
+          gradient: 'from-yellow-100 to-amber-100'
+        },
+        {
+          title: 'Parent Presentation Day',
+          description: 'Students demonstrating their coding skills to proud parents at the end-of-semester showcase.',
+          emoji: '👨‍👩‍👧‍👦',
+          gradient: 'from-teal-100 to-cyan-100'
+        },
+        {
+          title: 'Breakthrough Moments',
+          description: 'Capturing those "aha!" moments when students finally understand a challenging concept.',
+          emoji: '💡',
+          gradient: 'from-violet-100 to-purple-100'
+        },
+        {
+          title: 'Creative Projects',
+          description: 'Students expressing their creativity through code - digital art and interactive stories.',
+          emoji: '🎨',
+          gradient: 'from-rose-100 to-pink-100'
+        },
+        {
+          title: 'Peer Teaching',
+          description: 'Advanced students helping their classmates, fostering a collaborative learning environment.',
+          emoji: '👫',
+          gradient: 'from-emerald-100 to-green-100'
+        },
+        {
+          title: 'Final Projects',
+          description: 'Comprehensive final projects showcasing everything students learned throughout the course.',
+          emoji: '🚀',
+          gradient: 'from-indigo-100 to-blue-100'
+        },
+        {
+          title: 'Course Completion',
+          description: 'Celebrating with students as they complete their first formal computer science course.',
+          emoji: '🎊',
+          gradient: 'from-amber-100 to-yellow-100'
+        },
+        {
+          title: 'Teacher Reflection',
+          description: 'Personal moments reflecting on the impact of education and the joy of inspiring young minds.',
+          emoji: '🤔',
+          gradient: 'from-gray-100 to-slate-100'
+        }
+      ]
+    },
+    'berkeley-2023': {
+      title: 'UC Berkeley Summer Session',
+      subtitle: 'Summer 2023 • California, USA',
+      description: 'A transformative summer studying at UC Berkeley, experiencing American education culture and building international perspectives that would later influence my approach to cross-cultural education.',
+      photos: [
+        {
+          title: 'Arrival at Berkeley',
+          description: 'First steps on the UC Berkeley campus, excited to begin this international educational journey.',
+          emoji: '✈️',
+          gradient: 'from-blue-100 to-sky-100'
+        },
+        {
+          title: 'Campus Life',
+          description: 'Exploring the beautiful UC Berkeley campus and discovering new places to study and relax.',
+          emoji: '🏛️',
+          gradient: 'from-green-100 to-emerald-100'
+        },
+        {
+          title: 'Study Sessions',
+          description: 'Intensive study sessions in Berkeley\'s libraries, adapting to American academic culture.',
+          emoji: '📚',
+          gradient: 'from-indigo-100 to-purple-100'
+        },
+        {
+          title: 'International Friendships',
+          description: 'Building lasting friendships with students from around the world.',
+          emoji: '🌍',
+          gradient: 'from-orange-100 to-red-100'
+        },
+        {
+          title: 'Golden Gate Bridge',
+          description: 'Iconic San Francisco visit - the Golden Gate Bridge representing new horizons and opportunities.',
+          emoji: '🌉',
+          gradient: 'from-emerald-100 to-green-100'
+        },
+        {
+          title: 'Academic Presentations',
+          description: 'Presenting research and projects to diverse international audiences.',
+          emoji: '📊',
+          gradient: 'from-purple-100 to-violet-100'
+        },
+        {
+          title: 'Cultural Exchange',
+          description: 'Sharing Chinese culture while learning about American educational approaches.',
+          emoji: '🎭',
+          gradient: 'from-pink-100 to-rose-100'
+        },
+        {
+          title: 'Research Collaboration',
+          description: 'Working on group projects with students from different academic backgrounds.',
+          emoji: '🔬',
+          gradient: 'from-cyan-100 to-blue-100'
+        },
+        {
+          title: 'San Francisco Exploration',
+          description: 'Discovering the vibrant culture and innovation ecosystem of the Bay Area.',
+          emoji: '🏙️',
+          gradient: 'from-yellow-100 to-amber-100'
+        },
+        {
+          title: 'Silicon Valley Visit',
+          description: 'Visiting tech companies and understanding the innovation culture that drives technological advancement.',
+          emoji: '💻',
+          gradient: 'from-teal-100 to-cyan-100'
+        },
+        {
+          title: 'Final Presentations',
+          description: 'Culminating academic work with comprehensive final presentations.',
+          emoji: '🎯',
+          gradient: 'from-violet-100 to-purple-100'
+        },
+        {
+          title: 'Graduation Day',
+          description: 'Celebrating the successful completion of the Berkeley summer program.',
+          emoji: '🎓',
+          gradient: 'from-orange-100 to-red-100'
+        },
+        {
+          title: 'Farewell Moments',
+          description: 'Emotional goodbyes and promises to stay connected with new international friends.',
+          emoji: '👋',
+          gradient: 'from-rose-100 to-pink-100'
+        },
+        {
+          title: 'Departure Reflection',
+          description: 'Reflecting on personal growth and new perspectives gained during this transformative experience.',
+          emoji: '✨',
+          gradient: 'from-indigo-100 to-blue-100'
+        },
+        {
+          title: 'Journey Home',
+          description: 'Returning to China with new insights and inspiration for future educational endeavors.',
+          emoji: '🛫',
+          gradient: 'from-emerald-100 to-green-100'
+        },
+        {
+          title: 'Lasting Impact',
+          description: 'The Berkeley experience continuing to influence my approach to cross-cultural education.',
+          emoji: '🌟',
+          gradient: 'from-amber-100 to-yellow-100'
+        }
+      ]
+    },
+    'xjtu-beginning-2022': {
+      title: 'Journey Begins at XJTU',
+      subtitle: 'Fall 2022 • Xi\'an Jiaotong University',
+      description: 'The beginning of my university journey at Xi\'an Jiaotong University, where I would discover my passion for research, teaching, and building bridges between technology and education.',
+      photos: [
+        {
+          title: 'First Day at University',
+          description: 'Stepping into Xi\'an Jiaotong University for the first time, full of excitement and anticipation.',
+          emoji: '🎒',
+          gradient: 'from-cyan-100 to-blue-100'
+        },
+        {
+          title: 'Dormitory Life',
+          description: 'Setting up my new home away from home and meeting my roommates.',
+          emoji: '🏠',
+          gradient: 'from-green-100 to-emerald-100'
+        },
+        {
+          title: 'New Friends',
+          description: 'Building friendships that would last throughout university and beyond.',
+          emoji: '👥',
+          gradient: 'from-violet-100 to-purple-100'
+        },
+        {
+          title: 'Campus Exploration',
+          description: 'Discovering the historic and beautiful campus of Xi\'an Jiaotong University.',
+          emoji: '🏫',
+          gradient: 'from-teal-100 to-cyan-100'
+        },
+        {
+          title: 'First Computer Science Class',
+          description: 'Introduction to programming - the moment that sparked my passion for computer science.',
+          emoji: '💻',
+          gradient: 'from-blue-100 to-indigo-100'
+        },
+        {
+          title: 'Study Groups',
+          description: 'Forming study groups with classmates to tackle challenging coursework together.',
+          emoji: '📚',
+          gradient: 'from-orange-100 to-red-100'
+        },
+        {
+          title: 'Research Interest Discovery',
+          description: 'First exposure to AI research that would shape my future academic pursuits.',
+          emoji: '🔬',
+          gradient: 'from-purple-100 to-violet-100'
+        },
+        {
+          title: 'Student Organizations',
+          description: 'Joining clubs and organizations to expand my horizons beyond academics.',
+          emoji: '🎭',
+          gradient: 'from-pink-100 to-rose-100'
+        },
+        {
+          title: 'First Semester Success',
+          description: 'Celebrating good grades and successful adaptation to university life.',
+          emoji: '🏆',
+          gradient: 'from-yellow-100 to-amber-100'
+        }
+      ]
+    }
+  };
+
+  window.openPhotoGallery = function openPhotoGallery(galleryId) {
+    const gallery = photoGalleries[galleryId];
+    if (!gallery) return;
+
+    // Set modal content
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    const modalDescription = document.getElementById('modalDescription');
+    if (modalTitle) modalTitle.textContent = gallery.title;
+    if (modalSubtitle) modalSubtitle.textContent = gallery.subtitle;
+    if (modalDescription) modalDescription.innerHTML = `<p class="text-gray-700 leading-relaxed">${gallery.description}</p>`;
+
+    // Generate photo grid
+    const photoGrid = document.getElementById('photoGrid');
+    if (!photoGrid) return;
+    photoGrid.innerHTML = gallery.photos.map((photo, index) => `
+      <div class="photo-item bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer" data-index="${index}">
+        <div class="aspect-w-4 aspect-h-3">
+          <div class="w-full h-48 bg-gradient-to-br ${photo.gradient} flex items-center justify-center">
+            <div class="text-center">
+              <div class="text-4xl mb-3">${photo.emoji}</div>
+              <p class="text-sm font-medium text-gray-700 px-2">${photo.title}</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-600 leading-relaxed">${photo.description}</p>
+        </div>
+      </div>
+    `).join('');
+
+    // Attach click listeners to avoid inline onclick issues with quotes
+    Array.from(photoGrid.querySelectorAll('.photo-item')).forEach(item => {
+      const index = parseInt(item.getAttribute('data-index') || '0', 10);
+      const photo = gallery.photos[index];
+      item.addEventListener('click', () => {
+        window.viewPhotoDetail(photo.title, photo.description);
+      });
+    });
+
+    // Show modal
+    const modal = document.getElementById('photoGalleryModal');
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    const modalPanel = modal.querySelector('.bg-white');
+    if (modalPanel) modalPanel.classList.add('modal-enter');
+    if (document && document.body) {
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  window.closePhotoGallery = function closePhotoGallery() {
+    const modal = document.getElementById('photoGalleryModal');
+    if (modal) modal.classList.add('hidden');
+    if (document && document.body) {
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  window.viewPhotoDetail = function viewPhotoDetail(title, description) {
+    alert(`${title}\n\n${description}\n\n[In a real implementation, this would open a larger photo viewer with comments and sharing options]`);
+  }
+
+  // Close modal when clicking outside
+  document.getElementById('photoGalleryModal')?.addEventListener('click', function(e) {
+    if (e.target === this) {
+      window.closePhotoGallery();
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      window.closePhotoGallery();
+    }
+  });
+</script>
