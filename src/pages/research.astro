@@ -34,150 +34,6 @@ import FileViewer from '../components/FileViewer.astro';
     </div>
   </section>
 
-  <!-- Current Research -->
-  <section class="py-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Research</h2>
-        <p class="text-lg text-gray-600">Active projects bridging AI research with real-world applications in healthcare and education</p>
-      </div>
-
-      <div class="space-y-12">
-        <!-- Research Project 1 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden research-card">
-          <div class="md:flex">
-            <div class="md:w-1/3 bg-gradient-to-br from-primary-100 to-primary-200 p-8 flex items-center justify-center">
-              <div class="text-center">
-                <div class="text-primary-600 mb-4">
-                  <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-bold text-primary-800">Deep Learning & Explainable AI</h3>
-              </div>
-            </div>
-            <div class="md:w-2/3 p-8">
-              <div class="mb-4">
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">Explainable AI for Complex Decision Making</h3>
-                <p class="text-primary-600 font-medium">Xi'an Jiaotong University | 2023 - Present</p>
-              </div>
-              <p class="text-gray-700 mb-6 leading-relaxed">
-                Pioneering research in explainable AI with demonstrated impact through published work on adversarial robustness
-                and interpretable medical systems. Currently developing novel visualization methods and attention mechanisms
-                that help users understand how AI systems make decisions in critical applications like healthcare.
-              </p>
-              <div class="space-y-4">
-                <div>
-                  <h4 class="font-semibold text-gray-900 mb-2">Key Contributions:</h4>
-                  <ul class="list-disc list-inside text-gray-700 space-y-1">
-                    <li>Novel attention visualization techniques for transformer models</li>
-                    <li>Interpretable feature extraction methods for neural networks</li>
-                    <li>User study design for evaluating AI explainability</li>
-                  </ul>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">PyTorch</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Transformer Models</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Attention Mechanisms</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Visualization</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Research Project 2 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden research-card">
-          <div class="md:flex">
-            <div class="md:w-1/3 bg-gradient-to-br from-teal-100 to-teal-200 p-8 flex items-center justify-center">
-              <div class="text-center">
-                <div class="text-teal-600 mb-4">
-                  <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-bold text-teal-800">Mental Health AI</h3>
-              </div>
-            </div>
-            <div class="md:w-2/3 p-8">
-              <div class="mb-4">
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">Sentiment Analysis for Mental Health Applications</h3>
-                <p class="text-teal-600 font-medium">Xi'an Jiaotong University | 2023 - Present</p>
-              </div>
-              <p class="text-gray-700 mb-6 leading-relaxed">
-                Creating cutting-edge emotion diagnosis support systems using BERT and LIME explanations, with proven success
-                at national conferences. This research combines NLP with psychological insights to develop tools that can
-                identify emotional patterns while maintaining interpretability - crucial for mental health applications where
-                understanding AI decisions is essential for clinical trust.
-              </p>
-              <div class="space-y-4">
-                <div>
-                  <h4 class="font-semibold text-gray-900 mb-2">Research Focus:</h4>
-                  <ul class="list-disc list-inside text-gray-700 space-y-1">
-                    <li>Multi-modal sentiment analysis combining text, audio, and behavioral data</li>
-                    <li>Privacy-preserving techniques for sensitive mental health data</li>
-                    <li>Real-time emotion recognition and intervention systems</li>
-                    <li>Ethical AI considerations in mental health applications</li>
-                  </ul>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full research-tag">NLP</span>
-                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full research-tag">BERT/RoBERTa</span>
-                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full research-tag">Privacy-Preserving ML</span>
-                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full research-tag">Healthcare AI</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Research Project 3 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden research-card">
-          <div class="md:flex">
-            <div class="md:w-1/3 bg-gradient-to-br from-primary-100 to-teal-100 p-8 flex items-center justify-center">
-              <div class="text-center">
-                <div class="text-primary-600 mb-4">
-                  <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-bold text-primary-800">Educational AI</h3>
-              </div>
-            </div>
-            <div class="md:w-2/3 p-8">
-              <div class="mb-4">
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">AI-Powered Educational Tools</h3>
-                <p class="text-primary-600 font-medium">Personal Research Project | 2024 - Present</p>
-              </div>
-              <p class="text-gray-700 mb-6 leading-relaxed">
-                Leveraging hands-on experience teaching 350+ elementary students to inform AI-powered educational research.
-                This unique intersection of practical pedagogy and machine learning is producing innovations in adaptive
-                assessment, personalized learning pathways, and intelligent code review systems tailored for young learners.
-              </p>
-              <div class="space-y-4">
-                <div>
-                  <h4 class="font-semibold text-gray-900 mb-2">Innovation Areas:</h4>
-                  <ul class="list-disc list-inside text-gray-700 space-y-1">
-                    <li>Adaptive assessment systems that adjust to student learning pace</li>
-                    <li>AI-powered code review and feedback for beginner programmers</li>
-                    <li>Natural language interfaces for programming education</li>
-                    <li>Gamification strategies enhanced by machine learning</li>
-                  </ul>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Educational Technology</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Adaptive Learning</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Code Analysis</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Gamification</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Publications and Presentations -->
   <section class="py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -401,6 +257,150 @@ import FileViewer from '../components/FileViewer.astro';
                 <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full research-tag">Burnout Prevention</span>
                 <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full research-tag">Public Engagement</span>
               </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Research -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Research</h2>
+        <p class="text-lg text-gray-600">Active projects bridging AI research with real-world applications in healthcare and education</p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Research Project 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden research-card">
+          <div class="md:flex">
+            <div class="md:w-1/3 bg-gradient-to-br from-primary-100 to-primary-200 p-8 flex items-center justify-center">
+              <div class="text-center">
+                <div class="text-primary-600 mb-4">
+                  <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-primary-800">Deep Learning & Explainable AI</h3>
+              </div>
+            </div>
+            <div class="md:w-2/3 p-8">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Explainable AI for Complex Decision Making</h3>
+                <p class="text-primary-600 font-medium">Xi'an Jiaotong University | 2023 - Present</p>
+              </div>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                Pioneering research in explainable AI with demonstrated impact through published work on adversarial robustness
+                and interpretable medical systems. Currently developing novel visualization methods and attention mechanisms
+                that help users understand how AI systems make decisions in critical applications like healthcare.
+              </p>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">Key Contributions:</h4>
+                  <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>Novel attention visualization techniques for transformer models</li>
+                    <li>Interpretable feature extraction methods for neural networks</li>
+                    <li>User study design for evaluating AI explainability</li>
+                  </ul>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">PyTorch</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Transformer Models</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Attention Mechanisms</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Visualization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Project 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden research-card">
+          <div class="md:flex">
+            <div class="md:w-1/3 bg-gradient-to-br from-teal-100 to-teal-200 p-8 flex items-center justify-center">
+              <div class="text-center">
+                <div class="text-teal-600 mb-4">
+                  <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-teal-800">Mental Health AI</h3>
+              </div>
+            </div>
+            <div class="md:w-2/3 p-8">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Sentiment Analysis for Mental Health Applications</h3>
+                <p class="text-teal-600 font-medium">Xi'an Jiaotong University | 2023 - Present</p>
+              </div>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                Creating cutting-edge emotion diagnosis support systems using BERT and LIME explanations, with proven success
+                at national conferences. This research combines NLP with psychological insights to develop tools that can
+                identify emotional patterns while maintaining interpretability - crucial for mental health applications where
+                understanding AI decisions is essential for clinical trust.
+              </p>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">Research Focus:</h4>
+                  <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>Multi-modal sentiment analysis combining text, audio, and behavioral data</li>
+                    <li>Privacy-preserving techniques for sensitive mental health data</li>
+                    <li>Real-time emotion recognition and intervention systems</li>
+                    <li>Ethical AI considerations in mental health applications</li>
+                  </ul>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full research-tag">NLP</span>
+                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full research-tag">BERT/RoBERTa</span>
+                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full research-tag">Privacy-Preserving ML</span>
+                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full research-tag">Healthcare AI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Project 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden research-card">
+          <div class="md:flex">
+            <div class="md:w-1/3 bg-gradient-to-br from-primary-100 to-teal-100 p-8 flex items-center justify-center">
+              <div class="text-center">
+                <div class="text-primary-600 mb-4">
+                  <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-primary-800">Educational AI</h3>
+              </div>
+            </div>
+            <div class="md:w-2/3 p-8">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">AI-Powered Educational Tools</h3>
+                <p class="text-primary-600 font-medium">Personal Research Project | 2024 - Present</p>
+              </div>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                Leveraging hands-on experience teaching 350+ elementary students to inform AI-powered educational research.
+                This unique intersection of practical pedagogy and machine learning is producing innovations in adaptive
+                assessment, personalized learning pathways, and intelligent code review systems tailored for young learners.
+              </p>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">Innovation Areas:</h4>
+                  <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>Adaptive assessment systems that adjust to student learning pace</li>
+                    <li>AI-powered code review and feedback for beginner programmers</li>
+                    <li>Natural language interfaces for programming education</li>
+                    <li>Gamification strategies enhanced by machine learning</li>
+                  </ul>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Educational Technology</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Adaptive Learning</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Code Analysis</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Gamification</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
