@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import FileViewer from '../components/FileViewer.astro';
 ---
 
 <Layout title="Research Portfolio - AI & Explainable Machine Learning" description="Explore my research in deep learning, explainable AI, and sentiment analysis for mental health applications at Xi'an Jiaotong University">
@@ -17,17 +18,247 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-          <div class="text-3xl font-bold text-primary-600 mb-2">2+</div>
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center research-card">
+          <div class="text-3xl font-bold text-primary-600 mb-2 metric-number">2+</div>
           <div class="text-gray-700">Years of Research</div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-          <div class="text-3xl font-bold text-teal-600 mb-2">3</div>
-          <div class="text-gray-700">Active Projects</div>
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center research-card">
+          <div class="text-3xl font-bold text-teal-600 mb-2 metric-number">7</div>
+          <div class="text-gray-700">Publications & Presentations</div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
-          <div class="text-3xl font-bold text-primary-600 mb-2">1</div>
-          <div class="text-gray-700">Conference Presentations</div>
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center research-card">
+          <div class="text-3xl font-bold text-primary-600 mb-2 metric-number">3</div>
+          <div class="text-gray-700">Research Programs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications and Presentations -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Publications & Presentations</h2>
+        <p class="text-lg text-gray-600">Published research, conference presentations, and ongoing contributions to AI and mental health</p>
+      </div>
+
+      <!-- Featured Publications -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+          <span class="bg-gradient-to-r from-amber-400 to-orange-400 w-2 h-8 rounded-full mr-3"></span>
+          Featured Publications
+        </h3>
+
+        <!-- Adversarial Attacks Paper (arXiv) -->
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 mb-6 cursor-pointer"
+             onclick="openFileViewer('research-viewer', 'Adversarial Attacks on RL-based Medical Systems', '/docs/AdversarialFS.pdf', 'pdf')">
+          <div class="flex items-start justify-between">
+            <div class="flex-1">
+              <div class="flex items-center mb-3">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mr-3">
+                  📄 arXiv Preprint
+                </span>
+                <span class="text-sm text-gray-500">Pioneer Academics Program, CMU</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                Adversarial Attacks on Reinforcement Learning-based Medical Questionnaire Systems
+                <svg class="w-5 h-5 ml-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </h3>
+              <p class="text-blue-700 font-medium mb-2">
+                <a href="https://arxiv.org/abs/2508.05677" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                  arXiv:2508.05677
+                </a> • Mentored by Prof. Hanan Hibshi, Carnegie Mellon University
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Novel research on adversarial robustness in medical AI systems, focusing on input-level perturbation strategies
+                and medical constraint validation. <span class="text-blue-600 font-medium">Click to view paper →</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Competition Presentations -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+          <span class="bg-gradient-to-r from-green-400 to-emerald-400 w-2 h-8 rounded-full mr-3"></span>
+          Competition & Conference Presentations
+        </h3>
+
+        <!-- EASRL-MH Project Group -->
+        <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden mb-8">
+          <div class="bg-gradient-to-r from-emerald-50 to-teal-50 px-6 py-4 border-b border-gray-200">
+            <h4 class="text-lg font-bold text-gray-900 flex items-center">
+              <span class="text-2xl mr-3">🏆</span>
+              EASRL-MH: Enhanced Adaptive Symptom Reasoning Learning for Mental Health
+            </h4>
+            <p class="text-emerald-700 text-sm mt-1">
+              China International College Students' Innovation Competition (CICSIC) 2025 • Selected as Top 20 in Shaanxi Province
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 p-6">
+            <!-- Presentation -->
+            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
+                 onclick="openFileViewer('research-viewer', 'EASRL-MH - Conference Presentation', '/docs/EASRL-MH.pdf', 'pdf')">
+              <div class="flex items-center mb-2">
+                <span class="text-emerald-600 mr-2">📊</span>
+                <span class="text-sm font-medium text-emerald-800 bg-emerald-100 px-2 py-1 rounded">
+                  Presentation
+                </span>
+              </div>
+              <p class="text-gray-700 text-sm">
+                Conference presentation slides
+                <span class="text-emerald-600 font-medium block mt-1">Click to view →</span>
+              </p>
+            </div>
+
+            <!-- Poster -->
+            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
+                 onclick="openFileViewer('research-viewer', 'EASRL-MH - Research Poster', '/docs/EASRL-MH_poster.pdf', 'pdf')">
+              <div class="flex items-center mb-2">
+                <span class="text-emerald-600 mr-2">🖼️</span>
+                <span class="text-sm font-medium text-emerald-800 bg-emerald-100 px-2 py-1 rounded">
+                  Poster
+                </span>
+              </div>
+              <p class="text-gray-700 text-sm">
+                Research poster presentation
+                <span class="text-emerald-600 font-medium block mt-1">Click to view →</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- BERT Emotion Diagnosis Project Group -->
+        <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden mb-8">
+          <div class="bg-gradient-to-r from-purple-50 to-pink-50 px-6 py-4 border-b border-gray-200">
+            <h4 class="text-lg font-bold text-gray-900 flex items-center">
+              <span class="text-2xl mr-3">🧠</span>
+              BERT-Based Emotion Diagnosis Support System with LIME Explanations
+            </h4>
+            <p class="text-purple-700 text-sm mt-1">
+              China Talented Youth Program National Conference • Huazhong University of Science and Technology • December 2024
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 p-6">
+            <!-- Paper Draft -->
+            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
+                 onclick="openFileViewer('research-viewer', 'BERT Emotion Diagnosis - Research Paper', '/docs/BERT-emo.pdf', 'pdf')">
+              <div class="flex items-center mb-2">
+                <span class="text-purple-600 mr-2">📄</span>
+                <span class="text-sm font-medium text-purple-800 bg-purple-100 px-2 py-1 rounded">
+                  Research Paper
+                </span>
+              </div>
+              <p class="text-gray-700 text-sm">
+                Full research paper on emotion diagnosis with AI interpretability
+                <span class="text-purple-600 font-medium block mt-1">Click to view →</span>
+              </p>
+            </div>
+
+            <!-- Poster -->
+            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
+                 onclick="openFileViewer('research-viewer', 'BERT Emotion Diagnosis - Conference Poster', '/docs/BERT-emo_poster.pdf', 'pdf')">
+              <div class="flex items-center mb-2">
+                <span class="text-purple-600 mr-2">🖼️</span>
+                <span class="text-sm font-medium text-purple-800 bg-purple-100 px-2 py-1 rounded">
+                  Conference Poster
+                </span>
+              </div>
+              <p class="text-gray-700 text-sm">
+                Conference poster presentation
+                <span class="text-purple-600 font-medium block mt-1">Click to view →</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Papers & Surveys -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+          <span class="bg-gradient-to-r from-indigo-400 to-purple-400 w-2 h-8 rounded-full mr-3"></span>
+          Research Papers & Surveys
+        </h3>
+
+        <!-- XAI Survey -->
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 cursor-pointer"
+             onclick="openFileViewer('research-viewer', 'Interpretable AI Survey Paper', '/docs/XAI.pdf', 'pdf')">
+          <div class="flex items-start justify-between">
+            <div class="flex-1">
+              <div class="flex items-center mb-3">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 mr-3">
+                  📝 Survey Paper
+                </span>
+                <span class="text-sm text-gray-500">China Talented Youth Project</span>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2 flex items-center">
+                Interpretable Artificial Intelligence: A Survey of Methods and Applications
+                <svg class="w-4 h-4 ml-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Comprehensive survey of interpretable AI methods and their applications across domains.
+                <span class="text-indigo-600 font-medium">Click to view paper →</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Public Engagement & Science Communication -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+          <span class="bg-gradient-to-r from-pink-400 to-rose-400 w-2 h-8 rounded-full mr-3"></span>
+          Public Engagement & Science Communication
+        </h3>
+
+        <!-- Mental Health Social Media Post -->
+        <div class="bg-gradient-to-r from-pink-50 to-rose-50 border border-pink-200 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer research-card"
+             onclick="openFileViewer('research-viewer', 'Mental Health: Taking a Breath - Social Media Post', '/docs/Mental-Health_IG.pdf', 'pdf')">
+          <div class="flex items-start justify-between">
+            <div class="flex-1">
+              <div class="flex items-center mb-3">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-pink-100 text-pink-800 mr-3">
+                  📱 Social Media
+                </span>
+                <span class="text-sm text-gray-500">
+                  <a href="https://www.instagram.com/scholarspioneer/" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                    ScholarsOfPioneer Instagram
+                  </a>
+                </span>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                "Taking a Breath" - Mental Health Awareness Post on Burnout Prevention
+                <svg class="w-4 h-4 ml-2 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </h3>
+              <p class="text-pink-700 font-medium mb-2">
+                Featured on @ScholarsOfPioneer• Research-backed mental health guidance
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Science communication piece addressing academic burnout, featuring evidence-based strategies for student mental health.
+                Combines psychological research with accessible advice on active recovery, growth mindset, and stress management.
+                Includes 10 peer-reviewed citations and practical applications of psychological research.
+                <span class="text-pink-600 font-medium block mt-2"><a href="https://www.instagram.com/p/DJUJHd9JYK-/?img_index=1" target="_blank" rel="noopener noreferrer" class="hover:underline font-semibold">
+                  Click to view post →
+                </a> </span>
+              </p>
+              <!-- <div class="flex flex-wrap gap-2 mt-4">
+                <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full research-tag">Science Communication</span>
+                <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full research-tag">Mental Health Advocacy</span>
+                <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full research-tag">Burnout Prevention</span>
+                <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full research-tag">Public Engagement</span>
+              </div> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -43,7 +274,7 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="space-y-12">
         <!-- Research Project 1 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden research-card">
           <div class="md:flex">
             <div class="md:w-1/3 bg-gradient-to-br from-primary-100 to-primary-200 p-8 flex items-center justify-center">
               <div class="text-center">
@@ -89,7 +320,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Research Project 2 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden research-card">
           <div class="md:flex">
             <div class="md:w-1/3 bg-gradient-to-br from-teal-100 to-teal-200 p-8 flex items-center justify-center">
               <div class="text-center">
@@ -130,7 +361,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Research Project 3 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden research-card">
           <div class="md:flex">
             <div class="md:w-1/3 bg-gradient-to-br from-primary-100 to-teal-100 p-8 flex items-center justify-center">
               <div class="text-center">
@@ -148,9 +379,9 @@ import Layout from '../layouts/Layout.astro';
                 <p class="text-primary-600 font-medium">Personal Research Project | 2024 - Present</p>
               </div>
               <p class="text-gray-700 mb-6 leading-relaxed">
-                Investigating how AI can enhance computer science education, particularly for younger learners.
-                This research combines insights from my teaching experience with COMPSCI 0.10 to develop
-                intelligent tutoring systems and adaptive learning platforms.
+                Leveraging hands-on experience teaching 350+ elementary students to inform AI-powered educational research.
+                This unique intersection of practical pedagogy and machine learning is producing innovations in adaptive
+                assessment, personalized learning pathways, and intelligent code review systems tailored for young learners.
               </p>
               <div class="space-y-4">
                 <div>
@@ -163,10 +394,10 @@ import Layout from '../layouts/Layout.astro';
                   </ul>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Educational Technology</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Adaptive Learning</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Code Analysis</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Gamification</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Educational Technology</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Adaptive Learning</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Code Analysis</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full research-tag">Gamification</span>
                 </div>
               </div>
             </div>
@@ -193,9 +424,10 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-4">Impact-Driven Research</h3>
           <p class="text-gray-700 leading-relaxed">
-            Every research project I undertake starts with a real-world problem. I believe the most meaningful
-            AI research is that which can directly improve people's lives, whether through better healthcare,
-            more accessible education, or more interpretable systems.
+            Every research project I undertake starts with a real-world problem. From developing adversarial-robust
+            medical questionnaire systems to creating emotion diagnosis tools, my work demonstrates how rigorous
+            research can directly improve lives through better healthcare access, enhanced educational tools,
+            and more trustworthy AI systems.
           </p>
         </div>
 
@@ -207,9 +439,9 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-4">Explainability First</h3>
           <p class="text-gray-700 leading-relaxed">
-            As AI systems become more powerful, making them interpretable becomes more crucial. I prioritize
-            developing methods that not only perform well but can also explain their reasoning to users,
-            especially in high-stakes applications.
+            My published research consistently emphasizes explainability - from LIME explanations in emotion diagnosis
+            to interpretable AI surveys. I believe that for AI to be truly beneficial in healthcare and education,
+            users must understand not just what the system predicts, but why it makes those predictions.
           </p>
         </div>
 
@@ -221,9 +453,10 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-4">Interdisciplinary Collaboration</h3>
           <p class="text-gray-700 leading-relaxed">
-            The best AI research happens at the intersection of computer science with other fields. My work
-            actively seeks collaboration with educators, psychologists, and domain experts to ensure
-            technical solutions meet real human needs.
+            My research thrives on interdisciplinary collaboration - from working with Carnegie Mellon faculty
+            on adversarial attacks to combining psychological insights with NLP for emotion diagnosis.
+            This collaborative approach ensures technical innovations address genuine human needs across
+            healthcare, education, and beyond.
           </p>
         </div>
 
@@ -235,66 +468,11 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-4">Ethical AI Development</h3>
           <p class="text-gray-700 leading-relaxed">
-            Responsible AI development requires considering privacy, fairness, and societal impact from the
-            beginning. I integrate ethical considerations into every stage of research, from data collection
-            to model deployment and evaluation.
+            My work on adversarial robustness and privacy-preserving techniques in medical AI demonstrates
+            a commitment to ethical development. I believe responsible AI means not just building systems
+            that work, but ensuring they're secure, fair, and beneficial for all users - especially in
+            sensitive applications like mental health and education.
           </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Publications and Presentations -->
-  <section class="py-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Publications & Presentations</h2>
-        <p class="text-lg text-gray-600">Sharing research findings with the academic community</p>
-      </div>
-
-      <div class="space-y-6">
-        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-500">
-          <div class="flex items-start justify-between">
-            <div class="flex-1">
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                Explainable AI Approaches for Student Mental Health Assessment
-              </h3>
-              <p class="text-gray-600 mb-2">
-                Presented at the China Talented Youth Program National Conference, 2024
-              </p>
-              <p class="text-sm text-gray-500">
-                Research presentation to leading university professors on applying explainable AI techniques
-                to mental health applications in educational settings.
-              </p>
-            </div>
-            <div class="flex-shrink-0 ml-4">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-100 text-primary-800">
-                Conference
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-teal-500">
-          <div class="flex items-start justify-between">
-            <div class="flex-1">
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                Democratizing CS Education: A Case Study in Elementary School Programming
-              </h3>
-              <p class="text-gray-600 mb-2">
-                In preparation for Educational Technology Conference, 2024
-              </p>
-              <p class="text-sm text-gray-500">
-                Analysis of COMPSCI 0.10 curriculum effectiveness and methodologies for teaching computer science
-                concepts to young learners.
-              </p>
-            </div>
-            <div class="flex-shrink-0 ml-4">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-100 text-teal-800">
-                In Progress
-              </span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -308,16 +486,34 @@ import Layout from '../layouts/Layout.astro';
         Looking ahead to the next frontiers in AI research and education
       </p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-          <h3 class="text-xl font-semibold text-white mb-3">Multimodal AI for Education</h3>
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300">
+          <div class="flex items-center mb-3">
+            <span class="text-2xl mr-3">🔮</span>
+            <h3 class="text-xl font-semibold text-white">Adversarial Robustness in Healthcare AI</h3>
+          </div>
           <p class="text-primary-100">
-            Combining vision, language, and behavioral data to create more comprehensive educational AI systems
+            Building on my published arXiv research to develop more secure and robust AI systems for medical applications,
+            with focus on real-world deployment considerations.
           </p>
         </div>
-        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-          <h3 class="text-xl font-semibold text-white mb-3">Cross-Cultural AI Ethics</h3>
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300">
+          <div class="flex items-center mb-3">
+            <span class="text-2xl mr-3">🎓</span>
+            <h3 class="text-xl font-semibold text-white">Explainable AI for Education</h3>
+          </div>
           <p class="text-primary-100">
-            Developing AI systems that respect and adapt to different cultural contexts and values
+            Extending my interpretable AI research to create educational tools that can explain their reasoning
+            to both teachers and students, fostering trust and understanding.
+          </p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 md:col-span-2">
+          <div class="flex items-center mb-3">
+            <span class="text-2xl mr-3">🌍</span>
+            <h3 class="text-xl font-semibold text-white">Cross-Cultural Mental Health AI</h3>
+          </div>
+          <p class="text-primary-100">
+            Developing culturally-aware emotion diagnosis systems that can adapt to different cultural expressions
+            of mental health, building on my BERT-based emotion research with international collaboration.
           </p>
         </div>
       </div>
@@ -331,4 +527,60 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <!-- File Viewer Modal -->
+  <FileViewer id="research-viewer" />
 </Layout>
+
+<style>
+  /* Enhanced animations and visual effects */
+  .research-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .research-card:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Gradient text animation */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .gradient-text {
+    background: linear-gradient(-45deg, #3b82f6, #06b6d4, #8b5cf6, #f59e0b);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Subtle pulse for achievement numbers */
+  .metric-number {
+    animation: subtle-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes subtle-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+
+  /* Enhanced focus states for accessibility */
+  .research-item:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 12px;
+  }
+
+  /* Improved tag hover effects */
+  .research-tag {
+    transition: all 0.2s ease;
+  }
+
+  .research-tag:hover {
+    transform: scale(1.05);
+  }
+</style>

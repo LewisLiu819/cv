@@ -1,0 +1,193 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div id={id} class="file-viewer-modal fixed inset-0 z-50 hidden bg-black bg-opacity-75 flex items-center justify-center p-4">
+  <div class="relative bg-white rounded-lg shadow-xl max-w-6xl max-h-[90vh] w-full flex flex-col">
+    <!-- Header -->
+    <div class="flex items-center justify-between p-4 border-b">
+      <h3 class="text-lg font-semibold text-gray-900" id={`${id}-title`}>
+        Document Viewer
+      </h3>
+      <button
+        type="button"
+        class="close-modal text-gray-400 hover:text-gray-600 text-xl font-bold p-1"
+        aria-label="Close modal"
+      >
+        ×
+      </button>
+    </div>
+
+    <!-- Content Area -->
+    <div class="flex-1 overflow-hidden">
+      <div id={`${id}-content`} class="w-full h-full flex items-center justify-center min-h-[60vh]">
+        <div class="text-gray-500">
+          <svg class="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+          </svg>
+          <p>Loading document...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="p-4 border-t flex justify-end">
+      <button
+        type="button"
+        class="close-modal px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add event listeners for all file viewer modals
+    document.querySelectorAll('.file-viewer-modal').forEach(function(modal) {
+      const modalId = modal.id;
+      const closeButtons = modal.querySelectorAll('.close-modal');
+
+      // Close modal functionality
+      closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          modal.classList.add('hidden');
+          // Clear content
+          const content = document.getElementById(modalId + '-content');
+          if (content) {
+            content.innerHTML = `
+              <div class="text-gray-500">
+                <svg class="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+                <p>Loading document...</p>
+              </div>
+            `;
+          }
+        });
+      });
+
+      // Close on background click
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+        }
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.file-viewer-modal').forEach(function(modal) {
+          if (!modal.classList.contains('hidden')) {
+            modal.classList.add('hidden');
+          }
+        });
+      }
+    });
+  });
+
+  // Function to open file viewer
+  window.openFileViewer = function(modalId, fileName, fileUrl, fileType) {
+    const modal = document.getElementById(modalId);
+    const title = document.getElementById(`${modalId}-title`);
+    const content = document.getElementById(`${modalId}-content`);
+
+    if (!modal || !title || !content) return;
+
+    title.textContent = fileName;
+
+    // Show modal
+    modal.classList.remove('hidden');
+
+    // Create appropriate viewer based on file type
+    const extension = fileType || fileUrl.split('.').pop().toLowerCase();
+
+    let viewerHTML = '';
+
+    switch (extension) {
+      case 'pdf':
+        viewerHTML = `
+          <iframe
+            src="${fileUrl}"
+            class="w-full h-full border-0 min-h-[60vh]"
+            title="${fileName}"
+          ></iframe>
+        `;
+        break;
+
+      case 'jpg':
+      case 'jpeg':
+      case 'png':
+      case 'gif':
+      case 'webp':
+        viewerHTML = `
+          <div class="flex items-center justify-center h-full">
+            <img
+              src="${fileUrl}"
+              alt="${fileName}"
+              class="max-w-full max-h-full object-contain"
+            />
+          </div>
+        `;
+        break;
+
+      case 'ppt':
+      case 'pptx':
+        viewerHTML = `
+          <div class="flex flex-col items-center justify-center h-full text-center p-8">
+            <svg class="w-16 h-16 text-orange-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <p class="text-lg font-medium text-gray-900 mb-2">${fileName}</p>
+            <p class="text-gray-600 mb-4">PowerPoint presentations cannot be previewed directly in the browser.</p>
+            <a
+              href="${fileUrl}"
+              download
+              class="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+            >
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              Download Presentation
+            </a>
+          </div>
+        `;
+        break;
+
+      default:
+        viewerHTML = `
+          <div class="flex flex-col items-center justify-center h-full text-center p-8">
+            <svg class="w-16 h-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+            <p class="text-lg font-medium text-gray-900 mb-2">${fileName}</p>
+            <p class="text-gray-600 mb-4">This file type cannot be previewed directly.</p>
+            <a
+              href="${fileUrl}"
+              download
+              class="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+            >
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              Download File
+            </a>
+          </div>
+        `;
+    }
+
+    content.innerHTML = viewerHTML;
+  };
+</script>
+
+<style>
+  .file-viewer-modal {
+    backdrop-filter: blur(4px);
+  }
+</style>

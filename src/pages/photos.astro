@@ -1,0 +1,1698 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Photos & Memories - Journey Through Events" description="Visual timeline of memorable moments, events, and experiences throughout my academic and personal journey">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-teal-50 py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          Photos & <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-teal-600">Memories</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          A visual timeline of memorable moments, research milestones, and experiences
+          that have shaped my academic and personal journey.
+        </p>
+
+        <!-- Search and Filter Controls -->
+        <div class="mt-8 max-w-2xl mx-auto">
+          <div class="relative mb-6">
+            <input
+              type="text"
+              id="photoSearch"
+              placeholder="Search photos by title, description, or event..."
+              class="w-full px-4 py-3 pl-12 pr-4 text-gray-900 bg-white border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              aria-label="Search photos"
+            >
+            <svg class="absolute left-4 top-3.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div class="flex flex-wrap justify-center gap-2 mb-4">
+            <button onclick="filterPhotos('all')" class="filter-btn active px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors" data-filter="all">
+              All Events
+            </button>
+            <button onclick="filterPhotos('2024')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors" data-filter="2024">
+              2024
+            </button>
+            <button onclick="filterPhotos('2023')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors" data-filter="2023">
+              2023
+            </button>
+            <button onclick="filterPhotos('2022')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors" data-filter="2022">
+              2022
+            </button>
+            <button onclick="filterPhotos('research')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors" data-filter="research">
+              Research
+            </button>
+            <button onclick="filterPhotos('teaching')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors" data-filter="teaching">
+              Teaching
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+          <div class="text-3xl font-bold text-primary-600 mb-2">2024</div>
+          <div class="text-gray-700">Current Year</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+          <div class="text-3xl font-bold text-teal-600 mb-2">50+</div>
+          <div class="text-gray-700">Memorable Moments</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+          <div class="text-3xl font-bold text-primary-600 mb-2">5</div>
+          <div class="text-gray-700">Major Events</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative">
+        <!-- Timeline Line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary-300 to-teal-300 h-full"></div>
+
+        <!-- Timeline Events -->
+        <div class="space-y-16">
+
+          <!-- Event 1: Conference Presentations 2024 -->
+          <div class="timeline-event">
+            <div class="flex items-center justify-center mb-8">
+              <div class="bg-white border-4 border-primary-300 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10">
+                <span class="text-primary-600 font-bold">2024</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Research Conference Presentations</h3>
+                <p class="text-primary-600 font-medium">December 2024 • Huazhong University of Science and Technology</p>
+              </div>
+
+              <!-- Preview Photos (3 featured) -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('conference-2024', 0)">
+                  <picture>
+                    <source srcset="/photos/conference-2024/01-presentation.webp" type="image/webp">
+                    <img
+                      data-src="/photos/conference-2024/01-presentation.jpg"
+                      alt="Conference presentation showing BERT emotion diagnosis research"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Conference Presentation</p>
+                    </div>
+                  </div>
+                  <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button class="p-1 bg-white bg-opacity-80 rounded-full hover:bg-opacity-100 transition-all" onclick="event.stopPropagation(); sharePhoto('conference-2024', 0)" aria-label="Share photo">
+                      <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('conference-2024', 1)">
+                  <picture>
+                    <source srcset="/photos/conference-2024/02-research-setup.webp" type="image/webp">
+                    <img
+                      data-src="/photos/conference-2024/02-research-setup.jpg"
+                      alt="Research presentation setup and preparation"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Research Presentation</p>
+                    </div>
+                  </div>
+                  <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button class="p-1 bg-white bg-opacity-80 rounded-full hover:bg-opacity-100 transition-all" onclick="event.stopPropagation(); sharePhoto('conference-2024', 1)" aria-label="Share photo">
+                      <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('conference-2024', 2)">
+                  <picture>
+                    <source srcset="/photos/conference-2024/03-award-ceremony.webp" type="image/webp">
+                    <img
+                      data-src="/photos/conference-2024/03-award-ceremony.jpg"
+                      alt="Award ceremony recognition for outstanding research"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Award Ceremony</p>
+                    </div>
+                  </div>
+                  <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button class="p-1 bg-white bg-opacity-80 rounded-full hover:bg-opacity-100 transition-all" onclick="event.stopPropagation(); sharePhoto('conference-2024', 2)" aria-label="Share photo">
+                      <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View All Button -->
+              <div class="text-center">
+                <button onclick="openPhotoGallery('conference-2024')"
+                        class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  View All 12 Photos
+                </button>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                Presenting my research on BERT-based emotion diagnosis systems at the China Talented Youth Program
+                National Conference. This milestone marked a significant achievement in making AI explainable for
+                mental health applications.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 2: Research Collaboration -->
+          <div class="timeline-event">
+            <div class="flex items-center justify-center mb-8">
+              <div class="bg-white border-4 border-teal-300 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10">
+                <span class="text-teal-600 font-bold">2024</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Carnegie Mellon Research Collaboration</h3>
+                <p class="text-teal-600 font-medium">Summer 2024 • Pioneer Academics Program</p>
+              </div>
+
+              <!-- Preview Photos (2 featured) -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('cmu-research-2024', 0)">
+                  <picture>
+                    <source srcset="/photos/cmu-research-2024/01-lab-session.webp" type="image/webp">
+                    <img
+                      data-src="/photos/cmu-research-2024/01-lab-session.jpg"
+                      alt="Lab research session at Carnegie Mellon University"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Lab Research Session</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('cmu-research-2024', 1)">
+                  <picture>
+                    <source srcset="/photos/cmu-research-2024/02-paper-writing.webp" type="image/webp">
+                    <img
+                      data-src="/photos/cmu-research-2024/02-paper-writing.jpg"
+                      alt="Collaborative paper writing session for arXiv publication"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Paper Writing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View All Button -->
+              <div class="text-center">
+                <button onclick="openPhotoGallery('cmu-research-2024')"
+                        class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 bg-gradient-to-r from-red-600 to-orange-600 text-white font-medium rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  View All 8 Photos
+                </button>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                Working with Prof. Hanan Hibshi on adversarial attacks in medical AI systems. This collaboration
+                resulted in my first arXiv publication and opened new research directions in healthcare AI security.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 3: Teaching Experience -->
+          <div class="timeline-event">
+            <div class="flex items-center justify-center mb-8">
+              <div class="bg-white border-4 border-primary-300 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10">
+                <span class="text-primary-600 font-bold">2023</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">COMPSCI 0.10 Teaching</h3>
+                <p class="text-primary-600 font-medium">2023-2024 • Elementary CS Education</p>
+              </div>
+
+              <!-- Preview Photos (3 featured) -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('teaching-2023', 0)">
+                  <picture>
+                    <source srcset="/photos/teaching-2023/01-classroom.webp" type="image/webp">
+                    <img
+                      data-src="/photos/teaching-2023/01-classroom.jpg"
+                      alt="Teaching computer science concepts in elementary classroom"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Classroom Teaching</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('teaching-2023', 1)">
+                  <picture>
+                    <source srcset="/photos/teaching-2023/02-student-projects.webp" type="image/webp">
+                    <img
+                      data-src="/photos/teaching-2023/02-student-projects.jpg"
+                      alt="Students presenting their programming projects"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Student Projects</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('teaching-2023', 2)">
+                  <picture>
+                    <source srcset="/photos/teaching-2023/03-coding-games.webp" type="image/webp">
+                    <img
+                      data-src="/photos/teaching-2023/03-coding-games.jpg"
+                      alt="Interactive coding games making programming fun"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Coding Games</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View All Button -->
+              <div class="text-center">
+                <button onclick="openPhotoGallery('teaching-2023')"
+                        class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-medium rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  View All 24 Photos
+                </button>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                Creating and teaching comprehensive computer science curriculum to 350+ elementary students.
+                These moments captured the joy of learning and the excitement when young minds discover the magic of coding.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 4: UC Berkeley Experience -->
+          <div class="timeline-event">
+            <div class="flex items-center justify-center mb-8">
+              <div class="bg-white border-4 border-teal-300 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10">
+                <span class="text-teal-600 font-bold">2023</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">UC Berkeley Summer Session</h3>
+                <p class="text-teal-600 font-medium">Summer 2023 • California, USA</p>
+              </div>
+
+              <!-- Preview Photos (3 featured) -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('berkeley-2023', 0)">
+                  <picture>
+                    <source srcset="/photos/berkeley-2023/01-campus-life.webp" type="image/webp">
+                    <img
+                      data-src="/photos/berkeley-2023/01-campus-life.jpg"
+                      alt="Life on UC Berkeley campus during summer session"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Campus Life</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('berkeley-2023', 1)">
+                  <picture>
+                    <source srcset="/photos/berkeley-2023/02-golden-gate.webp" type="image/webp">
+                    <img
+                      data-src="/photos/berkeley-2023/02-golden-gate.jpg"
+                      alt="Iconic Golden Gate Bridge visit during Berkeley summer"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Golden Gate Bridge</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('berkeley-2023', 2)">
+                  <picture>
+                    <source srcset="/photos/berkeley-2023/03-graduation.webp" type="image/webp">
+                    <img
+                      data-src="/photos/berkeley-2023/03-graduation.jpg"
+                      alt="Berkeley summer program graduation ceremony"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Graduation Day</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View All Button -->
+              <div class="text-center">
+                <button onclick="openPhotoGallery('berkeley-2023')"
+                        class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  View All 16 Photos
+                </button>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                An transformative summer studying at UC Berkeley, experiencing American education culture and
+                building international perspectives that would later influence my approach to cross-cultural education.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 5: University Beginning -->
+          <div class="timeline-event">
+            <div class="flex items-center justify-center mb-8">
+              <div class="bg-white border-4 border-primary-300 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10">
+                <span class="text-primary-600 font-bold">2022</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Journey Begins at XJTU</h3>
+                <p class="text-primary-600 font-medium">Fall 2022 • Xi'an Jiaotong University</p>
+              </div>
+
+              <!-- Preview Photos (3 featured) -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('xjtu-beginning-2022', 0)">
+                  <picture>
+                    <source srcset="/photos/xjtu-beginning-2022/01-first-day.webp" type="image/webp">
+                    <img
+                      data-src="/photos/xjtu-beginning-2022/01-first-day.jpg"
+                      alt="First day at Xi'an Jiaotong University"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">First Day</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('xjtu-beginning-2022', 1)">
+                  <picture>
+                    <source srcset="/photos/xjtu-beginning-2022/02-new-friends.webp" type="image/webp">
+                    <img
+                      data-src="/photos/xjtu-beginning-2022/02-new-friends.jpg"
+                      alt="Meeting new friends and roommates at university"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">New Friends</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-preview relative aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group" onclick="openPhotoDetail('xjtu-beginning-2022', 2)">
+                  <picture>
+                    <source srcset="/photos/xjtu-beginning-2022/03-campus-exploration.webp" type="image/webp">
+                    <img
+                      data-src="/photos/xjtu-beginning-2022/03-campus-exploration.jpg"
+                      alt="Exploring the historic XJTU campus"
+                      class="lazy w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div class="p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p class="text-sm font-medium">Campus Exploration</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View All Button -->
+              <div class="text-center">
+                <button onclick="openPhotoGallery('xjtu-beginning-2022')"
+                        class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-medium rounded-lg hover:from-cyan-700 hover:to-teal-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  View All 9 Photos
+                </button>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                The beginning of my university journey at Xi'an Jiaotong University, where I would discover my passion
+                for research, teaching, and building bridges between technology and education.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Upload Section -->
+  <!-- <section class="bg-gray-50 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">More Memories Coming Soon</h2>
+      <p class="text-lg text-gray-600 mb-8">
+        This timeline will continue to grow with new experiences, research milestones, and memorable moments.
+      </p>
+      <div class="bg-white p-8 rounded-xl shadow-lg max-w-md mx-auto">
+        <div class="text-gray-400 mb-4">
+          <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Photo Upload System</h3>
+        <p class="text-gray-600">
+          Future updates will include a dynamic photo upload system to easily add new memories and events to this timeline.
+        </p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Enhanced Photo Gallery Modal -->
+  <div id="photoGalleryModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto relative">
+        <!-- Modal Header -->
+        <div class="sticky top-0 bg-white border-b border-gray-200 p-6 rounded-t-xl z-10">
+          <div class="flex items-center justify-between">
+            <div class="flex-1">
+              <h3 id="modalTitle" class="text-2xl font-bold text-gray-900"></h3>
+              <p id="modalSubtitle" class="text-gray-600 mt-1"></p>
+            </div>
+            <div class="flex items-center space-x-2">
+              <!-- View Mode Toggle -->
+              <button id="gridViewBtn" onclick="setViewMode('grid')" class="p-2 text-gray-600 hover:text-gray-900 rounded-lg" title="Grid view">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                </svg>
+              </button>
+              <button id="listViewBtn" onclick="setViewMode('list')" class="p-2 text-gray-600 hover:text-gray-900 rounded-lg" title="List view">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <button onclick="closePhotoGallery()" class="p-2 text-gray-400 hover:text-gray-600 transition-colors rounded-lg" aria-label="Close gallery">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Search within gallery -->
+          <div class="mt-4">
+            <div class="relative">
+              <input
+                type="text"
+                id="gallerySearch"
+                placeholder="Search within this gallery..."
+                class="w-full px-4 py-2 pl-10 pr-4 text-sm text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              >
+              <svg class="absolute left-3 top-2.5 h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="p-6">
+          <!-- Event Description -->
+          <div id="modalDescription" class="bg-gray-50 p-4 rounded-lg mb-6">
+          </div>
+
+          <!-- Photo Grid -->
+          <div id="photoGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 transition-all duration-300">
+            <!-- Photos will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enhanced Photo Lightbox Modal -->
+  <div id="photoLightbox" class="fixed inset-0 bg-black bg-opacity-95 z-60 hidden" role="dialog" aria-labelledby="lightboxTitle">
+    <div class="flex items-center justify-center min-h-screen relative">
+      <!-- Navigation arrows -->
+      <button id="prevPhoto" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 transition-colors z-10" aria-label="Previous photo">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+      <button id="nextPhoto" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 transition-colors z-10" aria-label="Next photo">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+
+      <!-- Photo container -->
+      <div class="max-w-7xl max-h-full w-full h-full flex flex-col items-center justify-center p-4">
+        <div class="relative max-w-full max-h-[80vh] overflow-hidden rounded-lg">
+          <img id="lightboxImage" src="" alt="" class="max-w-full max-h-full object-contain" loading="lazy">
+
+          <!-- Zoom controls -->
+          <div class="absolute bottom-4 right-4 flex space-x-2">
+            <button onclick="zoomPhoto(-0.2)" class="p-2 bg-black bg-opacity-50 text-white rounded-lg hover:bg-opacity-70 transition-all" aria-label="Zoom out">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7"></path>
+              </svg>
+            </button>
+            <button onclick="zoomPhoto(0.2)" class="p-2 bg-black bg-opacity-50 text-white rounded-lg hover:bg-opacity-70 transition-all" aria-label="Zoom in">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+              </svg>
+            </button>
+            <button onclick="resetZoom()" class="p-2 bg-black bg-opacity-50 text-white rounded-lg hover:bg-opacity-70 transition-all" aria-label="Reset zoom">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Photo info -->
+        <div class="mt-4 max-w-4xl w-full bg-black bg-opacity-50 text-white p-6 rounded-lg">
+          <div class="flex flex-col lg:flex-row lg:items-start lg:space-x-6">
+            <div class="flex-1">
+              <h3 id="lightboxTitle" class="text-xl font-bold mb-2"></h3>
+              <p id="lightboxDescription" class="text-gray-300 mb-4"></p>
+
+              <!-- EXIF Data -->
+              <div id="exifData" class="hidden">
+                <h4 class="text-sm font-semibold text-gray-400 mb-2">Photo Details</h4>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+                  <div><span class="text-gray-400">Camera:</span> <span id="exifCamera"></span></div>
+                  <div><span class="text-gray-400">Lens:</span> <span id="exifLens"></span></div>
+                  <div><span class="text-gray-400">Settings:</span> <span id="exifSettings"></span></div>
+                  <div><span class="text-gray-400">Date:</span> <span id="exifDate"></span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex flex-row lg:flex-col space-x-2 lg:space-x-0 lg:space-y-2 mt-4 lg:mt-0">
+              <button onclick="toggleExifData()" class="flex items-center px-3 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg transition-all text-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Info
+              </button>
+              <button onclick="shareCurrentPhoto()" class="flex items-center px-3 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg transition-all text-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                </svg>
+                Share
+              </button>
+              <button onclick="downloadCurrentPhoto()" class="flex items-center px-3 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg transition-all text-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                Download
+              </button>
+              <button onclick="closeLightbox()" class="flex items-center px-3 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg transition-all text-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .timeline-event {
+    position: relative;
+  }
+
+  .timeline-event::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 64px;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    border-radius: 50%;
+    z-index: 5;
+  }
+
+  /* Enhanced aspect ratio handling */
+  .aspect-w-4 {
+    position: relative;
+    padding-bottom: 75%;
+  }
+
+  .aspect-h-3 > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* Lazy loading blur effect */
+  .lazy {
+    filter: blur(5px);
+    transition: filter 0.3s;
+  }
+
+  .lazy.loaded {
+    filter: blur(0);
+  }
+
+  /* Photo preview enhancements */
+  .photo-preview {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .photo-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  .photo-preview:hover::before {
+    opacity: 1;
+  }
+
+  /* Enhanced hover animations */
+  .timeline-event .bg-white {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .timeline-event .bg-white:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Filter buttons */
+  .filter-btn {
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+
+  .filter-btn.active {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+
+  .filter-btn:hover:not(.active) {
+    background: #e5e7eb;
+    transform: translateY(-1px);
+  }
+
+  /* Timeline event filtering */
+  .timeline-event {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .timeline-event.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  /* Enhanced modal animations */
+  .modal-enter {
+    animation: modalEnter 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  @keyframes modalEnter {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  /* Lightbox specific styles */
+  #photoLightbox {
+    backdrop-filter: blur(10px);
+  }
+
+  #lightboxImage {
+    transition: transform 0.3s ease;
+    cursor: grab;
+  }
+
+  #lightboxImage:active {
+    cursor: grabbing;
+  }
+
+  #lightboxImage.zoomed {
+    cursor: move;
+  }
+
+  /* Photo grid view modes */
+  .photo-grid-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .photo-grid-list .photo-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .photo-grid-list .photo-item img {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 0.375rem;
+    margin-right: 1rem;
+  }
+
+  /* Photo item hover in modal */
+  .photo-item {
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .photo-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Search highlighting */
+  .search-highlight {
+    background-color: rgba(59, 130, 246, 0.2);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  /* Loading animation */
+  .loading-spinner {
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Responsive improvements */
+  @media (max-width: 768px) {
+    .timeline-event .bg-white {
+      margin: 0 1rem;
+    }
+
+    .photo-preview {
+      height: 200px;
+    }
+
+    #photoLightbox .max-w-7xl {
+      padding: 1rem;
+    }
+
+    .filter-btn {
+      font-size: 0.875rem;
+      padding: 0.5rem 0.75rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .photo-preview {
+      height: 180px;
+    }
+
+    #lightboxImage {
+      max-height: 60vh;
+    }
+
+    .filter-btn {
+      font-size: 0.75rem;
+      padding: 0.375rem 0.5rem;
+    }
+  }
+
+  /* Accessibility improvements */
+  @media (prefers-reduced-motion: reduce) {
+    .timeline-event,
+    .photo-preview,
+    .filter-btn,
+    .modal-enter,
+    .lazy {
+      transition: none;
+      animation: none;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .photo-preview::before {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .filter-btn.active {
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  /* Focus states for accessibility */
+  .photo-preview:focus,
+  .filter-btn:focus,
+  button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  /* Print styles */
+  @media print {
+    .filter-btn,
+    #photoGalleryModal,
+    #photoLightbox,
+    .absolute {
+      display: none !important;
+    }
+
+    .timeline-event {
+      break-inside: avoid;
+      margin-bottom: 2rem;
+    }
+  }
+</style>
+
+<script is:inline>
+  // Enhanced photo gallery data with real image support and metadata
+  const photoGalleries = {
+    'conference-2024': {
+      title: 'Research Conference Presentations',
+      subtitle: 'December 2024 • Huazhong University of Science and Technology',
+      description: 'A comprehensive look at my presentation of BERT-based emotion diagnosis systems at the China Talented Youth Program National Conference. These photos capture the excitement of sharing research findings and connecting with fellow researchers.',
+      year: '2024',
+      category: 'research',
+      tags: ['conference', 'research', 'BERT', 'AI', 'presentation'],
+      photos: [
+        {
+          title: 'Conference Opening Ceremony',
+          description: 'The grand opening of the China Talented Youth Program National Conference, with hundreds of young researchers gathered to share their work.',
+          src: '/photos/conference-2024/01-opening-ceremony.jpg',
+          thumb: '/photos/conference-2024/thumbs/01-opening-ceremony.jpg',
+          alt: 'Conference opening ceremony with researchers gathered in auditorium',
+          exif: {
+            camera: 'Canon EOS R5',
+            lens: '24-70mm f/2.8L',
+            settings: 'f/4.0, 1/125s, ISO 800',
+            date: '2024-12-15T09:00:00Z',
+            location: 'Wuhan, China'
+          }
+        },
+        {
+          title: 'Research Presentation Setup',
+          description: 'Setting up my presentation on BERT-based emotion diagnosis systems. Final preparations before sharing my research with the academic community.',
+          src: '/photos/conference-2024/02-presentation-setup.jpg',
+          thumb: '/photos/conference-2024/thumbs/02-presentation-setup.jpg',
+          alt: 'Speaker preparing presentation slides about BERT emotion diagnosis',
+          exif: {
+            camera: 'iPhone 15 Pro',
+            settings: 'f/2.8, 1/60s, ISO 400',
+            date: '2024-12-15T13:30:00Z',
+            location: 'Wuhan, China'
+          }
+        },
+        {
+          title: 'Presenting BERT Model',
+          description: 'Explaining the architecture and methodology of my emotion diagnosis system to conference attendees.',
+          src: '/photos/conference-2024/03-bert-presentation.jpg',
+          thumb: '/photos/conference-2024/thumbs/03-bert-presentation.jpg',
+          alt: 'Presenter explaining BERT model architecture to audience',
+          exif: {
+            camera: 'Sony A7 IV',
+            lens: '85mm f/1.8',
+            settings: 'f/2.8, 1/100s, ISO 1600',
+            date: '2024-12-15T14:15:00Z',
+            location: 'Wuhan, China'
+          }
+        },
+        {
+          title: 'Award Ceremony',
+          description: 'Receiving recognition for outstanding research contribution at the national level.',
+          src: '/photos/conference-2024/04-award-ceremony.jpg',
+          thumb: '/photos/conference-2024/thumbs/04-award-ceremony.jpg',
+          alt: 'Award ceremony recognizing outstanding research achievements',
+          exif: {
+            camera: 'Canon EOS R5',
+            lens: '70-200mm f/2.8L',
+            settings: 'f/4.0, 1/200s, ISO 800',
+            date: '2024-12-15T16:45:00Z',
+            location: 'Wuhan, China'
+          }
+        }
+      ]
+    },
+    'cmu-research-2024': {
+      title: 'Carnegie Mellon Research Collaboration',
+      subtitle: 'Summer 2024 • Pioneer Academics Program',
+      description: 'Behind-the-scenes look at my collaboration with Prof. Hanan Hibshi on adversarial attacks in medical AI systems. This research resulted in my first arXiv publication and opened new directions in healthcare AI security.',
+      year: '2024',
+      category: 'research',
+      tags: ['CMU', 'research', 'collaboration', 'adversarial', 'medical AI'],
+      photos: [
+        {
+          title: 'First Day at CMU',
+          description: 'Arriving at Carnegie Mellon University for the Pioneer Academics Program, excited to begin research.',
+          src: '/photos/cmu-research-2024/01-first-day.jpg',
+          thumb: '/photos/cmu-research-2024/thumbs/01-first-day.jpg',
+          alt: 'First day at Carnegie Mellon University campus',
+          exif: {
+            camera: 'iPhone 14 Pro',
+            settings: 'f/2.8, 1/120s, ISO 200',
+            date: '2024-06-15T08:00:00Z',
+            location: 'Pittsburgh, PA, USA'
+          }
+        },
+        {
+          title: 'Lab Research Session',
+          description: 'Deep dive into adversarial attack methods and their implications for medical AI systems.',
+          src: '/photos/cmu-research-2024/02-lab-session.jpg',
+          thumb: '/photos/cmu-research-2024/thumbs/02-lab-session.jpg',
+          alt: 'Research laboratory session at Carnegie Mellon',
+          exif: {
+            camera: 'Canon EOS R6',
+            lens: '24-105mm f/4L',
+            settings: 'f/5.6, 1/80s, ISO 1000',
+            date: '2024-07-02T14:30:00Z',
+            location: 'Pittsburgh, PA, USA'
+          }
+        }
+      ]
+    },
+    'teaching-2023': {
+      title: 'COMPSCI 0.10 Teaching Experience',
+      subtitle: '2023-2024 • Elementary CS Education',
+      description: 'Memorable moments from teaching comprehensive computer science curriculum to 350+ elementary students. These photos capture the joy of learning and the excitement when young minds discover the magic of coding.',
+      year: '2023',
+      category: 'teaching',
+      tags: ['teaching', 'elementary', 'computer science', 'education', 'students'],
+      photos: [
+        {
+          title: 'Classroom Teaching',
+          description: 'Explaining fundamental programming concepts using visual aids and interactive examples.',
+          src: '/photos/teaching-2023/01-classroom.jpg',
+          thumb: '/photos/teaching-2023/thumbs/01-classroom.jpg',
+          alt: 'Teaching computer science concepts in elementary classroom',
+          exif: {
+            camera: 'Sony A7 III',
+            lens: '35mm f/1.8',
+            settings: 'f/2.8, 1/100s, ISO 800',
+            date: '2023-09-20T10:30:00Z',
+            location: 'Xi\'an, China'
+          }
+        },
+        {
+          title: 'Student Projects Showcase',
+          description: 'Students proudly presenting their first programming projects - simple games and animations.',
+          src: '/photos/teaching-2023/02-student-projects.jpg',
+          thumb: '/photos/teaching-2023/thumbs/02-student-projects.jpg',
+          alt: 'Students presenting their programming projects',
+          exif: {
+            camera: 'iPhone 13 Pro',
+            settings: 'f/2.8, 1/60s, ISO 400',
+            date: '2023-11-15T14:00:00Z',
+            location: 'Xi\'an, China'
+          }
+        }
+      ]
+    },
+    'berkeley-2023': {
+      title: 'UC Berkeley Summer Session',
+      subtitle: 'Summer 2023 • California, USA',
+      description: 'A transformative summer studying at UC Berkeley, experiencing American education culture and building international perspectives that would later influence my approach to cross-cultural education.',
+      year: '2023',
+      category: 'education',
+      tags: ['Berkeley', 'summer', 'international', 'education', 'California'],
+      photos: [
+        {
+          title: 'Campus Life',
+          description: 'Exploring the beautiful UC Berkeley campus and discovering new places to study and relax.',
+          src: '/photos/berkeley-2023/01-campus-life.jpg',
+          thumb: '/photos/berkeley-2023/thumbs/01-campus-life.jpg',
+          alt: 'Life on UC Berkeley campus during summer session',
+          exif: {
+            camera: 'Canon EOS M50',
+            lens: '18-150mm f/3.5-6.3',
+            settings: 'f/5.6, 1/125s, ISO 200',
+            date: '2023-07-10T11:00:00Z',
+            location: 'Berkeley, CA, USA'
+          }
+        },
+        {
+          title: 'Golden Gate Bridge',
+          description: 'Iconic San Francisco visit - the Golden Gate Bridge representing new horizons and opportunities.',
+          src: '/photos/berkeley-2023/02-golden-gate.jpg',
+          thumb: '/photos/berkeley-2023/thumbs/02-golden-gate.jpg',
+          alt: 'Iconic Golden Gate Bridge visit during Berkeley summer',
+          exif: {
+            camera: 'iPhone 12 Pro',
+            settings: 'f/2.4, 1/200s, ISO 100',
+            date: '2023-07-22T16:30:00Z',
+            location: 'San Francisco, CA, USA'
+          }
+        }
+      ]
+    },
+    'xjtu-beginning-2022': {
+      title: 'Journey Begins at XJTU',
+      subtitle: 'Fall 2022 • Xi\'an Jiaotong University',
+      description: 'The beginning of my university journey at Xi\'an Jiaotong University, where I would discover my passion for research, teaching, and building bridges between technology and education.',
+      year: '2022',
+      category: 'education',
+      tags: ['XJTU', 'university', 'beginning', 'freshman', 'campus'],
+      photos: [
+        {
+          title: 'First Day at University',
+          description: 'Stepping into Xi\'an Jiaotong University for the first time, full of excitement and anticipation.',
+          src: '/photos/xjtu-beginning-2022/01-first-day.jpg',
+          thumb: '/photos/xjtu-beginning-2022/thumbs/01-first-day.jpg',
+          alt: 'First day at Xi\'an Jiaotong University',
+          exif: {
+            camera: 'Huawei P50 Pro',
+            settings: 'f/2.8, 1/120s, ISO 250',
+            date: '2022-09-01T08:30:00Z',
+            location: 'Xi\'an, China'
+          }
+        },
+        {
+          title: 'New Friends',
+          description: 'Building friendships that would last throughout university and beyond.',
+          src: '/photos/xjtu-beginning-2022/02-new-friends.jpg',
+          thumb: '/photos/xjtu-beginning-2022/thumbs/02-new-friends.jpg',
+          alt: 'Meeting new friends and roommates at university',
+          exif: {
+            camera: 'Canon EOS 750D',
+            lens: '50mm f/1.8',
+            settings: 'f/2.8, 1/80s, ISO 400',
+            date: '2022-09-05T18:00:00Z',
+            location: 'Xi\'an, China'
+          }
+        }
+      ]
+    }
+  };
+
+  // Global state management
+  let currentGallery = null;
+  let currentPhotoIndex = 0;
+  let currentViewMode = 'grid';
+  let currentZoom = 1;
+  let filteredPhotos = [];
+  let isDragging = false;
+  let lastX = 0;
+  let lastY = 0;
+  let currentFilter = 'all';
+
+  // Initialize when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    initializeLazyLoading();
+    initializeSearch();
+    initializeKeyboardNavigation();
+  });
+
+  // Lazy loading implementation
+  function initializeLazyLoading() {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          const src = img.getAttribute('data-src');
+          if (src) {
+            img.src = src;
+            img.classList.add('loaded');
+            img.removeAttribute('data-src');
+            observer.unobserve(img);
+          }
+        }
+      });
+    }, {
+      rootMargin: '50px 0px',
+      threshold: 0.01
+    });
+
+    // Observe all lazy images
+    document.querySelectorAll('img.lazy').forEach(img => {
+      imageObserver.observe(img);
+    });
+  }
+
+  // Search functionality
+  function initializeSearch() {
+    const searchInput = document.getElementById('photoSearch');
+    const gallerySearch = document.getElementById('gallerySearch');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', debounce(handleGlobalSearch, 300));
+    }
+
+    if (gallerySearch) {
+      gallerySearch.addEventListener('input', debounce(handleGallerySearch, 300));
+    }
+  }
+
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+
+  function handleGlobalSearch(event) {
+    const query = event.target.value.toLowerCase();
+    const timelineEvents = document.querySelectorAll('.timeline-event');
+
+    timelineEvents.forEach(event => {
+      const content = event.textContent.toLowerCase();
+      const shouldShow = query === '' || content.includes(query);
+
+      if (shouldShow) {
+        event.classList.remove('hidden');
+      } else {
+        event.classList.add('hidden');
+      }
+    });
+  }
+
+  function handleGallerySearch(event) {
+    const query = event.target.value.toLowerCase();
+    const photoItems = document.querySelectorAll('#photoGrid .photo-item');
+
+    photoItems.forEach(item => {
+      const content = item.textContent.toLowerCase();
+      const shouldShow = query === '' || content.includes(query);
+      item.style.display = shouldShow ? 'block' : 'none';
+    });
+  }
+
+  // Filter functionality
+  window.filterPhotos = function(filter) {
+    currentFilter = filter;
+    const timelineEvents = document.querySelectorAll('.timeline-event');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    // Update active filter button
+    filterBtns.forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.getAttribute('data-filter') === filter) {
+        btn.classList.add('active');
+      }
+    });
+
+    // Filter timeline events
+    timelineEvents.forEach(eventEl => {
+      let shouldShow = filter === 'all';
+
+      if (!shouldShow) {
+        const eventContent = eventEl.textContent.toLowerCase();
+        shouldShow = eventContent.includes(filter);
+      }
+
+      if (shouldShow) {
+        eventEl.classList.remove('hidden');
+      } else {
+        eventEl.classList.add('hidden');
+      }
+    });
+  }
+
+  // Enhanced photo gallery modal
+  window.openPhotoGallery = function(galleryId) {
+    currentGallery = photoGalleries[galleryId];
+    if (!currentGallery) return;
+
+    // Set modal content
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    const modalDescription = document.getElementById('modalDescription');
+
+    if (modalTitle) modalTitle.textContent = currentGallery.title;
+    if (modalSubtitle) modalSubtitle.textContent = currentGallery.subtitle;
+    if (modalDescription) {
+      modalDescription.innerHTML = `<p class="text-gray-700 leading-relaxed">${currentGallery.description}</p>`;
+    }
+
+    // Generate photo grid
+    generatePhotoGrid();
+
+    // Show modal with animation
+    const modal = document.getElementById('photoGalleryModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      const modalPanel = modal.querySelector('.bg-white');
+      if (modalPanel) modalPanel.classList.add('modal-enter');
+      document.body.style.overflow = 'hidden';
+
+      // Focus management for accessibility
+      const firstFocusable = modal.querySelector('input, button');
+      if (firstFocusable) firstFocusable.focus();
+    }
+  }
+
+  function generatePhotoGrid() {
+    const photoGrid = document.getElementById('photoGrid');
+    if (!photoGrid || !currentGallery) return;
+
+    const photos = currentGallery.photos;
+    filteredPhotos = photos;
+
+    const gridHTML = photos.map((photo, index) => `
+      <div class="photo-item bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300"
+           data-index="${index}"
+           onclick="openLightbox(${index})"
+           tabindex="0"
+           role="button"
+           aria-label="View ${photo.title}">
+        <div class="aspect-w-4 aspect-h-3">
+          <picture>
+            <source srcset="${photo.src?.replace('.jpg', '.webp')}" type="image/webp">
+            <img
+              src="${photo.thumb || photo.src || '/photos/placeholder.jpg'}"
+              alt="${photo.alt || photo.title}"
+              class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            >
+          </picture>
+        </div>
+        <div class="p-4">
+          <h4 class="font-semibold text-gray-900 mb-2">${photo.title}</h4>
+          <p class="text-sm text-gray-600 leading-relaxed line-clamp-3">${photo.description}</p>
+          <div class="mt-2 flex items-center justify-between">
+            <span class="text-xs text-gray-400">${photo.exif?.camera || 'Unknown camera'}</span>
+            <button onclick="event.stopPropagation(); sharePhoto(${index})" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="Share photo">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    photoGrid.innerHTML = gridHTML;
+
+    // Add keyboard navigation for photo items
+    photoGrid.querySelectorAll('.photo-item').forEach(item => {
+      item.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const index = parseInt(this.getAttribute('data-index'));
+          openLightbox(index);
+        }
+      });
+    });
+  }
+
+  // Enhanced lightbox functionality
+  window.openLightbox = function(photoIndex) {
+    currentPhotoIndex = photoIndex;
+    const photo = currentGallery.photos[photoIndex];
+    if (!photo) return;
+
+    // Set lightbox content
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxDescription = document.getElementById('lightboxDescription');
+
+    if (lightboxImage) {
+      lightboxImage.src = photo.src || photo.thumb || '/photos/placeholder.jpg';
+      lightboxImage.alt = photo.alt || photo.title;
+    }
+
+    if (lightboxTitle) lightboxTitle.textContent = photo.title;
+    if (lightboxDescription) lightboxDescription.textContent = photo.description;
+
+    // Set EXIF data
+    updateExifData(photo.exif);
+
+    // Setup navigation
+    updateNavigationButtons();
+
+    // Show lightbox
+    const lightbox = document.getElementById('photoLightbox');
+    if (lightbox) {
+      lightbox.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+
+      // Focus management
+      lightbox.focus();
+    }
+
+    // Reset zoom
+    resetZoom();
+  }
+
+  function updateExifData(exif) {
+    if (!exif) {
+      document.getElementById('exifData')?.classList.add('hidden');
+      return;
+    }
+
+    const exifCamera = document.getElementById('exifCamera');
+    const exifLens = document.getElementById('exifLens');
+    const exifSettings = document.getElementById('exifSettings');
+    const exifDate = document.getElementById('exifDate');
+
+    if (exifCamera) exifCamera.textContent = exif.camera || 'Unknown';
+    if (exifLens) exifLens.textContent = exif.lens || 'Unknown';
+    if (exifSettings) exifSettings.textContent = exif.settings || 'Unknown';
+    if (exifDate) {
+      const date = exif.date ? new Date(exif.date).toLocaleDateString() : 'Unknown';
+      exifDate.textContent = date;
+    }
+
+    document.getElementById('exifData')?.classList.add('hidden'); // Hidden by default
+  }
+
+  function updateNavigationButtons() {
+    const prevBtn = document.getElementById('prevPhoto');
+    const nextBtn = document.getElementById('nextPhoto');
+
+    if (prevBtn) {
+      prevBtn.style.display = currentPhotoIndex > 0 ? 'block' : 'none';
+      prevBtn.onclick = () => navigatePhoto(-1);
+    }
+
+    if (nextBtn) {
+      nextBtn.style.display = currentPhotoIndex < currentGallery.photos.length - 1 ? 'block' : 'none';
+      nextBtn.onclick = () => navigatePhoto(1);
+    }
+  }
+
+  window.navigatePhoto = function(direction) {
+    const newIndex = currentPhotoIndex + direction;
+    if (newIndex >= 0 && newIndex < currentGallery.photos.length) {
+      openLightbox(newIndex);
+    }
+  }
+
+  // Zoom functionality
+  window.zoomPhoto = function(delta) {
+    currentZoom = Math.max(0.5, Math.min(3, currentZoom + delta));
+    const image = document.getElementById('lightboxImage');
+    if (image) {
+      image.style.transform = `scale(${currentZoom})`;
+      image.classList.toggle('zoomed', currentZoom > 1);
+    }
+  }
+
+  window.resetZoom = function() {
+    currentZoom = 1;
+    const image = document.getElementById('lightboxImage');
+    if (image) {
+      image.style.transform = 'scale(1)';
+      image.classList.remove('zoomed');
+    }
+  }
+
+  // View mode toggle
+  window.setViewMode = function(mode) {
+    currentViewMode = mode;
+    const photoGrid = document.getElementById('photoGrid');
+    const gridBtn = document.getElementById('gridViewBtn');
+    const listBtn = document.getElementById('listViewBtn');
+
+    if (photoGrid) {
+      if (mode === 'list') {
+        photoGrid.classList.remove('grid-cols-1', 'md:grid-cols-2', 'lg:grid-cols-3');
+        photoGrid.classList.add('photo-grid-list');
+      } else {
+        photoGrid.classList.remove('photo-grid-list');
+        photoGrid.classList.add('grid-cols-1', 'md:grid-cols-2', 'lg:grid-cols-3');
+      }
+    }
+
+    // Update button states
+    if (gridBtn && listBtn) {
+      gridBtn.classList.toggle('text-primary-600', mode === 'grid');
+      listBtn.classList.toggle('text-primary-600', mode === 'list');
+    }
+  }
+
+  // EXIF data toggle
+  window.toggleExifData = function() {
+    const exifData = document.getElementById('exifData');
+    if (exifData) {
+      exifData.classList.toggle('hidden');
+    }
+  }
+
+  // Photo sharing functionality
+  window.sharePhoto = function(photoIndex) {
+    const photo = currentGallery.photos[photoIndex];
+    if (!photo) return;
+
+    if (navigator.share) {
+      navigator.share({
+        title: photo.title,
+        text: photo.description,
+        url: window.location.href
+      }).catch(console.error);
+    } else {
+      // Fallback: copy URL to clipboard
+      const url = `${window.location.href}#${currentGallery.title.replace(/\s+/g, '-').toLowerCase()}-${photoIndex}`;
+      navigator.clipboard.writeText(url).then(() => {
+        showNotification('Photo link copied to clipboard!');
+      }).catch(() => {
+        showNotification('Unable to copy link');
+      });
+    }
+  }
+
+  window.shareCurrentPhoto = function() {
+    sharePhoto(currentPhotoIndex);
+  }
+
+  // Photo download functionality
+  window.downloadCurrentPhoto = function() {
+    const photo = currentGallery.photos[currentPhotoIndex];
+    if (!photo) return;
+
+    const link = document.createElement('a');
+    link.href = photo.src || photo.thumb;
+    link.download = `${photo.title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.jpg`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  // Direct photo detail opening
+  window.openPhotoDetail = function(galleryId, photoIndex) {
+    openPhotoGallery(galleryId);
+    setTimeout(() => openLightbox(photoIndex), 100);
+  }
+
+  // Close functions
+  window.closePhotoGallery = function() {
+    const modal = document.getElementById('photoGalleryModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  window.closeLightbox = function() {
+    const lightbox = document.getElementById('photoLightbox');
+    if (lightbox) {
+      lightbox.classList.add('hidden');
+      document.body.style.overflow = 'hidden'; // Keep gallery modal open
+    }
+  }
+
+  // Keyboard navigation
+  function initializeKeyboardNavigation() {
+    document.addEventListener('keydown', function(e) {
+      const lightbox = document.getElementById('photoLightbox');
+      const modal = document.getElementById('photoGalleryModal');
+
+      if (!lightbox?.classList.contains('hidden')) {
+        // Lightbox is open
+        switch(e.key) {
+          case 'Escape':
+            closeLightbox();
+            break;
+          case 'ArrowLeft':
+            navigatePhoto(-1);
+            break;
+          case 'ArrowRight':
+            navigatePhoto(1);
+            break;
+          case '+':
+          case '=':
+            zoomPhoto(0.2);
+            break;
+          case '-':
+            zoomPhoto(-0.2);
+            break;
+          case '0':
+            resetZoom();
+            break;
+        }
+      } else if (!modal?.classList.contains('hidden')) {
+        // Gallery modal is open
+        if (e.key === 'Escape') {
+          closePhotoGallery();
+        }
+      }
+    });
+  }
+
+  // Utility functions
+  function showNotification(message) {
+    // Create a simple notification
+    const notification = document.createElement('div');
+    notification.className = 'fixed top-4 right-4 bg-primary-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 transition-all duration-300';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+      notification.style.opacity = '0';
+      setTimeout(() => document.body.removeChild(notification), 300);
+    }, 2000);
+  }
+
+  // Click outside to close modals
+  document.addEventListener('click', function(e) {
+    const galleryModal = document.getElementById('photoGalleryModal');
+    const lightbox = document.getElementById('photoLightbox');
+
+    if (galleryModal && e.target === galleryModal) {
+      closePhotoGallery();
+    }
+
+    if (lightbox && e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  // Touch/gesture support for mobile
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  document.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  });
+
+  document.addEventListener('touchend', function(e) {
+    if (!e.changedTouches[0]) return;
+
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+
+    // Only process horizontal swipes that are longer than vertical
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+      const lightbox = document.getElementById('photoLightbox');
+      if (!lightbox?.classList.contains('hidden')) {
+        if (deltaX > 0) {
+          navigatePhoto(-1); // Swipe right = previous
+        } else {
+          navigatePhoto(1);  // Swipe left = next
+        }
+      }
+    }
+  });
+</script>
