@@ -38,7 +38,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Research</h2>
-        <p class="text-lg text-gray-600">Active projects at Xi'an Jiaotong University</p>
+        <!-- <p class="text-lg text-gray-600">Active projects at Xi'an Jiaotong University</p> -->
       </div>
 
       <div class="space-y-12">
@@ -52,33 +52,36 @@ import Layout from '../layouts/Layout.astro';
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                   </svg>
                 </div>
-                <h3 class="text-xl font-bold text-primary-800">Deep Learning & Explainable AI</h3>
+                <h3 class="text-xl font-bold text-primary-800">AI4Health</h3>
               </div>
             </div>
             <div class="md:w-2/3 p-8">
               <div class="mb-4">
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">Explainable AI for Complex Decision Making</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">EASRL-MH: Enhanced Adaptive Symptom Reasoning Learning for Mental Health.</h3>
                 <p class="text-primary-600 font-medium">Xi'an Jiaotong University | 2023 - Present</p>
               </div>
               <p class="text-gray-700 mb-6 leading-relaxed">
-                Developing novel techniques for making deep learning models more interpretable and explainable.
-                Focus on creating visualization methods and attention mechanisms that help users understand
-                how AI systems make decisions, particularly in high-stakes applications.
+
+                Research mainly focused on AI for healthcare, especially for mental health. 
+                <br>
+                Developed <strong>EASRL-MH: Enhanced Adaptive Symptom Reasoning Learning for Mental Health.</strong>
+                This is a project intended to assist mental health diagnosis through reinforcement learning. <br>
+                Through selecting the most informative questions to ask, the model can diagnose the patient's mental disorder with high accuracy and relatively low number of questions.
+                Our model has achieved state-of-the-art results on the <a href="https://www.hcp.med.harvard.edu/ncs/index.php" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline hover:no-underline">NCS-R benchmark dataset</a>, 
+                successfully shortening the length of interview to an <strong>average of 9.6 questions with 86.4% accuracy and an AUC-ROC of 0.92</strong>.
               </p>
               <div class="space-y-4">
                 <div>
                   <h4 class="font-semibold text-gray-900 mb-2">Key Contributions:</h4>
                   <ul class="list-disc list-inside text-gray-700 space-y-1">
-                    <li>Novel attention visualization techniques for transformer models</li>
-                    <li>Interpretable feature extraction methods for neural networks</li>
-                    <li>User study design for evaluating AI explainability</li>
+                    <li>Reinforcement learning for mental health diagnosis</li>
+                    <li>State-of-the-art results on the NCS-R benchmark dataset</li>
                   </ul>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">PyTorch</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Transformer Models</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Attention Mechanisms</span>
-                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Visualization</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">AI4Health</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Reinforcement Learning</span>
+                  <span class="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Mental Health</span>
                 </div>
               </div>
             </div>
@@ -95,34 +98,31 @@ import Layout from '../layouts/Layout.astro';
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                   </svg>
                 </div>
-                <h3 class="text-xl font-bold text-teal-800">Mental Health AI</h3>
+                <h3 class="text-xl font-bold text-teal-800">Explainable AI (XAI)</h3>
               </div>
             </div>
             <div class="md:w-2/3 p-8">
               <div class="mb-4">
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">Sentiment Analysis for Mental Health Applications</h3>
-                <p class="text-teal-600 font-medium">Xi'an Jiaotong University | 2023 - Present</p>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">A BERT-Based Emotion Diagnosis Support System with Improved Explainability</h3>
+                <p class="text-teal-600 font-medium">Northwestern Polytechnical University,on behalf of China Talented Youth Project | 2024 - 2025</p>
               </div>
               <p class="text-gray-700 mb-6 leading-relaxed">
-                Developing AI systems that can analyze sentiment and emotional patterns in text to support
-                mental health applications. This research combines natural language processing with psychological
-                insights to create tools that can help identify early warning signs and provide supportive interventions.
+                Developed an <strong>AI emotional classification system based on BERT</strong>. 
+                The key innovation is the application of <strong>Local Interpretable Model-Agnostic Explanations (LIME)</strong> to improve the explainability of the model.
+                The model achieved <strong>over 95% classification accuracy</strong> on the Sentiment140 dataset consisting over 160 million tweets. 
               </p>
               <div class="space-y-4">
                 <div>
                   <h4 class="font-semibold text-gray-900 mb-2">Research Focus:</h4>
                   <ul class="list-disc list-inside text-gray-700 space-y-1">
-                    <li>Multi-modal sentiment analysis combining text, audio, and behavioral data</li>
-                    <li>Privacy-preserving techniques for sensitive mental health data</li>
-                    <li>Real-time emotion recognition and intervention systems</li>
-                    <li>Ethical AI considerations in mental health applications</li>
+                    <li>BERT-based emotion classification</li>
+                    <li>LIME for explainability</li>
                   </ul>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">NLP</span>
-                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">BERT/RoBERTa</span>
-                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">Privacy-Preserving ML</span>
-                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">Healthcare AI</span>
+                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">BERT</span>
+                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">LIME</span>
+                  <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">Explainable AI (XAI)</span>
                 </div>
               </div>
             </div>
